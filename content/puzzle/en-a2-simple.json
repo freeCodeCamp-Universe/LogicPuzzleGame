@@ -1,0 +1,2044 @@
+{
+  "puzzles": [
+    {
+      "title": "Clothing (1)",
+      "themeSlug": "clothing",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "present continuous",
+        "verb to wear",
+        "pronouns he/she"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Clothing",
+          "emoji": "👕",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Alice",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Ben",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Clara",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Dan",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Eva",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "hat",
+          "emoji": "🎩"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "scarf",
+          "emoji": "🧣"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "coat",
+          "emoji": "🧥"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "boots",
+          "emoji": "👢"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "gloves",
+          "emoji": "🧤"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👩 Alice is wearing the scarf.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Eva is wearing the gloves.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Ben is not wearing the hat.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Ben is not wearing the coat.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Clara is not wearing the coat.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "hat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "scarf",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "hat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "boots",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "hat",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "hat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "coat",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Eva",
+          "colItemLabel": "hat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Eva",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Eva",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Eva",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Eva",
+          "colItemLabel": "gloves",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "The present continuous 'is wearing' describes what someone has on right now. It is formed with: subject + is + verb-ing. Use it for both clothing ('She is wearing a scarf') and ongoing actions ('He is running')."
+    },
+    {
+      "title": "Clothing (2)",
+      "themeSlug": "clothing",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "present continuous",
+        "verb to wear",
+        "pronouns he/she"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Clothing",
+          "emoji": "👕",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Emma",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Finn",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Grace",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Harry",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Lena",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "gloves",
+          "emoji": "🧤"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "jacket",
+          "emoji": "🧥"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "dress",
+          "emoji": "👗"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "shirt",
+          "emoji": "👔"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "scarf",
+          "emoji": "🧣"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👩 Grace is wearing the gloves.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Lena is wearing the scarf.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Emma is not wearing the dress.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Emma is not wearing the shirt.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Harry is not wearing the dress.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "jacket",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "dress",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "shirt",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "jacket",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "dress",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "shirt",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "gloves",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "jacket",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "dress",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "shirt",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "jacket",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "dress",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "shirt",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Lena",
+          "colItemLabel": "gloves",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Lena",
+          "colItemLabel": "jacket",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Lena",
+          "colItemLabel": "dress",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Lena",
+          "colItemLabel": "shirt",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Lena",
+          "colItemLabel": "scarf",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'She is not wearing the dress' uses the pronoun 'she' to avoid repeating Emma's name. In English, pronouns must agree with gender: 'he' for males, 'she' for females. Notice the definite article 'the' before each clothing item — we use it because there is only one of each."
+    },
+    {
+      "title": "Clothing (3)",
+      "themeSlug": "clothing",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "present continuous",
+        "verb to wear",
+        "pronouns he/she"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Clothing",
+          "emoji": "👕",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Alice",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Clara",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Finn",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Harry",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Dan",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "scarf",
+          "emoji": "🧣"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "coat",
+          "emoji": "🧥"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "shoes",
+          "emoji": "👟"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "cap",
+          "emoji": "🧢"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "boots",
+          "emoji": "👢"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👨 Harry is wearing the coat.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Dan is wearing the boots.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Alice is not wearing the scarf.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Alice is not wearing the shoes.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Clara is not wearing the scarf.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "shoes",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "cap",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "shoes",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "cap",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "scarf",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "shoes",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "cap",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "coat",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "shoes",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "cap",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "boots",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "scarf",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "coat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "shoes",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "cap",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "boots",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "The present continuous can describe both temporary situations ('She is wearing boots today') and fixed facts in context ('He is wearing the coat' in a story). The key is the structure: subject + is/are + verb-ing."
+    },
+    {
+      "title": "Daily routines (1)",
+      "themeSlug": "daily-routines",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "simple present",
+        "adverbs of frequency"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Activities",
+          "emoji": "⚡",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Ben",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Clara",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Dan",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Emma",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Finn",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "runs",
+          "emoji": "🏃"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "reads",
+          "emoji": "📖"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "cooks",
+          "emoji": "🍳"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "swims",
+          "emoji": "🏊"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "yoga",
+          "emoji": "🧘"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👩 Emma always cooks before work.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Finn does yoga every morning.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Ben never reads in the morning.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Ben never runs.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Clara does not read.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "swims",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "runs",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "reads",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "cooks",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "yoga",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'Always', 'usually', 'never', and 'every' are frequency expressions. They go between the subject and the main verb: 'Finn does yoga every morning.' With 'to be', they go after: 'He is always on time.' 'Never' already means 'not ever' — never use 'not' with it."
+    },
+    {
+      "title": "Daily routines (2)",
+      "themeSlug": "daily-routines",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "simple present",
+        "adverbs of frequency"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Activities",
+          "emoji": "⚡",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Alice",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Finn",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Grace",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Harry",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Emma",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "cycles",
+          "emoji": "🚴"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "walks",
+          "emoji": "🚶"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "yoga",
+          "emoji": "🧘"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "draws",
+          "emoji": "✏️"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "swims",
+          "emoji": "🏊"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👨 Finn usually cycles to work.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Emma swims every morning.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Alice never walks.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Alice never draws.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Grace does not walk.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "cycles",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "yoga",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "cycles",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "cycles",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "draws",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "cycles",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "walks",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "swims",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "cycles",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "yoga",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "swims",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'Usually' means most of the time (about 70–90%). 'Never' means 0%. Both adverbs go before the main verb: 'Alice never walks.' / 'Finn usually cycles.' They do NOT need 'do/does not' — the adverb already expresses the meaning."
+    },
+    {
+      "title": "Daily routines (3)",
+      "themeSlug": "daily-routines",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "simple present",
+        "adverbs of frequency"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Activities",
+          "emoji": "⚡",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Ben",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Clara",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Emma",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Grace",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Dan",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "runs",
+          "emoji": "🏃"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "cooks",
+          "emoji": "🍳"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "walks",
+          "emoji": "🚶"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "draws",
+          "emoji": "✏️"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "reads",
+          "emoji": "📖"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👩 Emma always runs in the morning.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Dan reads every evening.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Ben never cooks.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Ben never walks.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Grace does not cook.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "draws",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "cooks",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "runs",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "walks",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "reads",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "runs",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "cooks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "walks",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "draws",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "reads",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'Does not' is the standard simple present negative for he/she/it/names: 'Grace does not cook.' In spoken English this contracts to 'doesn't': 'Grace doesn't cook.' Both are correct — 'does not' is more formal, 'doesn't' is more natural in conversation."
+    },
+    {
+      "title": "Food and eating out (1)",
+      "themeSlug": "food",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to like",
+        "simple present",
+        "countable/uncountable nouns"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Food",
+          "emoji": "🍽️",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Alice",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Dan",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Emma",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Finn",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Grace",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "pizza",
+          "emoji": "🍕"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "sushi",
+          "emoji": "🍣"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "soup",
+          "emoji": "🍜"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "salad",
+          "emoji": "🥗"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "pasta",
+          "emoji": "🍝"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👩 Emma likes pizza.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Grace likes pasta.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Alice does not like sushi.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Alice does not like salad.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Finn does not like salad.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "pizza",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "soup",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "pizza",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "soup",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "salad",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "pizza",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "soup",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "pizza",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "sushi",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "soup",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Finn",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "pizza",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "soup",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "pasta",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'Like' expresses a general preference: 'Emma likes pizza.' To negate, use 'does not like' (or 'doesn't like'): 'Alice does not like sushi.' Note that 'soup', 'salad', and 'pasta' are uncountable nouns — no 's' and no article needed: 'She likes soup', not 'She likes a soup'."
+    },
+    {
+      "title": "Food and eating out (2)",
+      "themeSlug": "food",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to like",
+        "simple present",
+        "countable/uncountable nouns"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Food",
+          "emoji": "🍽️",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Ben",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Clara",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Grace",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Harry",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Alice",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "pasta",
+          "emoji": "🍝"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "tacos",
+          "emoji": "🌮"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "curry",
+          "emoji": "🍛"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "burger",
+          "emoji": "🍔"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "sushi",
+          "emoji": "🍣"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👨 Harry likes pasta.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Alice likes sushi.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Ben does not like curry.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Ben does not like burger.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Clara does not like curry.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "tacos",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "curry",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Ben",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "curry",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "burger",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "curry",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Grace",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "pasta",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "curry",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "curry",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "sushi",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'Pasta', 'curry', and 'sushi' are uncountable nouns — they have no plural form and take no article when used generally: 'Ben likes tacos' (countable, plural). Compare: 'She likes curry' (uncountable) vs 'She likes a burger' (countable, singular). The article 'a' signals a countable noun."
+    },
+    {
+      "title": "Food and eating out (3)",
+      "themeSlug": "food",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to like",
+        "simple present",
+        "countable/uncountable nouns"
+      ],
+      "categories": [
+        {
+          "label": "People",
+          "emoji": "🧑",
+          "order": 0
+        },
+        {
+          "label": "Food",
+          "emoji": "🍽️",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "Alice",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Clara",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Dan",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Harry",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "Emma",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "sushi",
+          "emoji": "🍣"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "pasta",
+          "emoji": "🍝"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "tacos",
+          "emoji": "🌮"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "burger",
+          "emoji": "🍔"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "salad",
+          "emoji": "🥗"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👨 Harry likes sushi.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Emma likes salad.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Alice does not like pasta.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Alice does not like burger.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Dan does not like pasta.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "tacos",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Alice",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "pasta",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Clara",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "burger",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Dan",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "sushi",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Harry",
+          "colItemLabel": "salad",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "sushi",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "pasta",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "tacos",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "burger",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "Emma",
+          "colItemLabel": "salad",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'Would like' is more polite and specific than 'like': 'I would like the sushi, please.' Use it when ordering at a restaurant. 'Like' is for general preferences: 'Harry likes sushi' means he always enjoys it. 'Would like' refers to right now: 'I would like sushi tonight.'"
+    }
+  ]
+}

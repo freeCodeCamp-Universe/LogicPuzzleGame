@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === "production";
+
 const nextConfig = {
   output: "export",
-  basePath: "/lingua-grid-static",
+  basePath: isProd ? "/lingua-grid-static" : "",
   images: {
     unoptimized: true,
   },

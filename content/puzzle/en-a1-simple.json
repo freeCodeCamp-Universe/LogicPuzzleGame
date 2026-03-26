@@ -1,0 +1,2493 @@
+{
+  "puzzles": [
+    {
+      "title": "Animals and colors (1)",
+      "themeSlug": "animals",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "nouns",
+        "adjectives",
+        "verb to be"
+      ],
+      "categories": [
+        {
+          "label": "Animals",
+          "emoji": "🐾",
+          "order": 0
+        },
+        {
+          "label": "Colors",
+          "emoji": "🎨",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "cat",
+          "emoji": "🐱"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "dog",
+          "emoji": "🐶"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "rabbit",
+          "emoji": "🐰"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "fish",
+          "emoji": "🐟"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "bird",
+          "emoji": "🐦"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "red",
+          "emoji": "🔴"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "yellow",
+          "emoji": "🟡"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "blue",
+          "emoji": "🔵"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "green",
+          "emoji": "🟢"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "orange",
+          "emoji": "🟠"
+        }
+      ],
+      "clues": [
+        {
+          "text": "🐱 The cat is yellow.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐟 The fish is blue.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐦 The bird is green.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐶 The dog is not red.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "yellow",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "orange",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "orange",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "red",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "orange",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "blue",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "orange",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "green",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "orange",
+          "value": "NO"
+        }
+      ],
+      "grammarNote": "Use 'is' to state a fact: 'The cat is yellow.' Use 'is not' to say what is false: 'The dog is not red.' Both use the verb 'to be' with a color adjective — no extra words needed."
+    },
+    {
+      "title": "Animals and colors (2)",
+      "themeSlug": "animals",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "nouns",
+        "adjectives",
+        "verb to be"
+      ],
+      "categories": [
+        {
+          "label": "Animals",
+          "emoji": "🐾",
+          "order": 0
+        },
+        {
+          "label": "Colors",
+          "emoji": "🎨",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "horse",
+          "emoji": "🐴"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "bear",
+          "emoji": "🐻"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "frog",
+          "emoji": "🐸"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "owl",
+          "emoji": "🦉"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "fox",
+          "emoji": "🦊"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "blue",
+          "emoji": "🔵"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "orange",
+          "emoji": "🟠"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "brown",
+          "emoji": "🟤"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "pink",
+          "emoji": "🩷"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "gray",
+          "emoji": "🩶"
+        }
+      ],
+      "clues": [
+        {
+          "text": "🦉 The owl is blue.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐻 The bear is brown.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐸 The frog is orange.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐴 The horse is not pink.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "orange",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "brown",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "gray",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "orange",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "brown",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "gray",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "orange",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "brown",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "gray",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "blue",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "orange",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "brown",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "gray",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "orange",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "brown",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "pink",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "gray",
+          "value": "NO"
+        }
+      ],
+      "grammarNote": "'Gray', 'pink', and 'brown' are all color adjectives. In English, adjectives never change form — 'The horse is gray' and 'The horses are gray' use the same word. Notice: English uses 'gray', not 'grey' (though both spellings exist)."
+    },
+    {
+      "title": "Animals and colors (3)",
+      "themeSlug": "animals",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "nouns",
+        "adjectives",
+        "verb to be"
+      ],
+      "categories": [
+        {
+          "label": "Animals",
+          "emoji": "🐾",
+          "order": 0
+        },
+        {
+          "label": "Colors",
+          "emoji": "🎨",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "dog",
+          "emoji": "🐶"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "bear",
+          "emoji": "🐻"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "cat",
+          "emoji": "🐱"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "snake",
+          "emoji": "🐍"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "duck",
+          "emoji": "🦆"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "green",
+          "emoji": "🟢"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "pink",
+          "emoji": "🩷"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "black",
+          "emoji": "⬛"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "purple",
+          "emoji": "🟣"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "yellow",
+          "emoji": "🟡"
+        }
+      ],
+      "clues": [
+        {
+          "text": "🦆 The duck is yellow.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐍 The snake is purple.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐱 The cat is not pink.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🐱 The cat is not black.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🐶 The dog is not pink.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "black",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "pink",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "black",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "green",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "black",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "black",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "purple",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "pink",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "black",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "yellow",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "When two negative clues point to the same animal ('The cat is not pink' and 'The cat is not black'), you can eliminate two options at once. With enough negatives, only one color remains — and that must be the answer. This deduction technique works in English grammar too: narrowing down by ruling out."
+    },
+    {
+      "title": "Animals and habitats (1)",
+      "themeSlug": "animals",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "nouns",
+        "verb to be",
+        "prepositions of place"
+      ],
+      "categories": [
+        {
+          "label": "Animals",
+          "emoji": "🐾",
+          "order": 0
+        },
+        {
+          "label": "Habitats",
+          "emoji": "🌍",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "fish",
+          "emoji": "🐟"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "bird",
+          "emoji": "🐦"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "frog",
+          "emoji": "🐸"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "rabbit",
+          "emoji": "🐰"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "cow",
+          "emoji": "🐄"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "house",
+          "emoji": "🏠"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "tree",
+          "emoji": "🌳"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "water",
+          "emoji": "💧"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "farm",
+          "emoji": "🌾"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "forest",
+          "emoji": "🌲"
+        }
+      ],
+      "clues": [
+        {
+          "text": "🐟 The fish is in the water.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐦 The bird is in the tree.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐸 The frog is not at home.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🐸 The frog is not on the farm.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🐰 The rabbit is not on the farm.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "water",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fish",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "tree",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bird",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "frog",
+          "colItemLabel": "forest",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "house",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "rabbit",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cow",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cow",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cow",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cow",
+          "colItemLabel": "farm",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "cow",
+          "colItemLabel": "forest",
+          "value": "NO"
+        }
+      ],
+      "grammarNote": "English uses different prepositions for different places: 'in' for spaces that surround you ('in the water', 'in the forest'), 'on' for surfaces ('on the farm'), and 'at' for specific destinations ('at home'). These prepositions must be memorized — there is no single rule."
+    },
+    {
+      "title": "Animals and habitats (2)",
+      "themeSlug": "animals",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "nouns",
+        "verb to be",
+        "prepositions of place"
+      ],
+      "categories": [
+        {
+          "label": "Animals",
+          "emoji": "🐾",
+          "order": 0
+        },
+        {
+          "label": "Habitats",
+          "emoji": "🌍",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "snake",
+          "emoji": "🐍"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "bear",
+          "emoji": "🐻"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "duck",
+          "emoji": "🦆"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "cat",
+          "emoji": "🐱"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "horse",
+          "emoji": "🐴"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "house",
+          "emoji": "🏠"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "tree",
+          "emoji": "🌳"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "water",
+          "emoji": "💧"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "farm",
+          "emoji": "🌾"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "forest",
+          "emoji": "🌲"
+        }
+      ],
+      "clues": [
+        {
+          "text": "🦆 The duck is in the water.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐱 The cat is at home.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🐍 The snake is not on the farm.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🐍 The snake is not in the tree.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🐻 The bear is not in the tree.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "snake",
+          "colItemLabel": "forest",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "farm",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "bear",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "water",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "duck",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "house",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "cat",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "tree",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "horse",
+          "colItemLabel": "forest",
+          "value": "NO"
+        }
+      ],
+      "grammarNote": "'At home' is a fixed expression in English — we never say 'in the home' to mean where someone lives. Compare: 'The cat is at home' (lives there) vs 'The cat is in the house' (is inside right now). Both are correct, but 'at home' is far more natural."
+    },
+    {
+      "title": "Animals and habitats (3)",
+      "themeSlug": "animals",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "nouns",
+        "verb to be",
+        "prepositions of place"
+      ],
+      "categories": [
+        {
+          "label": "Animals",
+          "emoji": "🐾",
+          "order": 0
+        },
+        {
+          "label": "Habitats",
+          "emoji": "🌍",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "owl",
+          "emoji": "🦉"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "dog",
+          "emoji": "🐶"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "pig",
+          "emoji": "🐷"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "fox",
+          "emoji": "🦊"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "deer",
+          "emoji": "🦌"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "house",
+          "emoji": "🏠"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "tree",
+          "emoji": "🌳"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "water",
+          "emoji": "💧"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "farm",
+          "emoji": "🌾"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "forest",
+          "emoji": "🌲"
+        }
+      ],
+      "clues": [
+        {
+          "text": "🐷 The pig is on the farm.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🦌 The deer is in the water.",
+          "clueType": "positive"
+        },
+        {
+          "text": "🦉 The owl is not in the tree.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🦉 The owl is not at home.",
+          "clueType": "negative"
+        },
+        {
+          "text": "🦊 The fox is not at home.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "owl",
+          "colItemLabel": "forest",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "house",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dog",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "pig",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "pig",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "pig",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "pig",
+          "colItemLabel": "farm",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "pig",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "tree",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "water",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "fox",
+          "colItemLabel": "forest",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "deer",
+          "colItemLabel": "house",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "deer",
+          "colItemLabel": "tree",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "deer",
+          "colItemLabel": "water",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "deer",
+          "colItemLabel": "farm",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "deer",
+          "colItemLabel": "forest",
+          "value": "NO"
+        }
+      ],
+      "grammarNote": "Notice the three prepositions used here: 'in' (in the tree, in the water, in the forest), 'on' (on the farm), and 'at' (at home). A good trick: 'at' is used for named places thought of as destinations or roles, while 'in' is used when you picture yourself surrounded by something."
+    },
+    {
+      "title": "Family members and pets (1)",
+      "themeSlug": "family",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to have",
+        "nouns",
+        "possessive pronouns his/her"
+      ],
+      "categories": [
+        {
+          "label": "Family",
+          "emoji": "👨‍👩‍👧",
+          "order": 0
+        },
+        {
+          "label": "Pets",
+          "emoji": "🐾",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "mom",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "dad",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "grandma",
+          "emoji": "👵"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "sister",
+          "emoji": "👧"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "brother",
+          "emoji": "👦"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "cat",
+          "emoji": "🐱"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "dog",
+          "emoji": "🐶"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "bird",
+          "emoji": "🐦"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "rabbit",
+          "emoji": "🐰"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "fish",
+          "emoji": "🐟"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👩 Mom has a bird.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👵 Grandma has a fish.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Dad does not have a cat.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Dad does not have a rabbit.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👧 Sister does not have a cat.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "bird",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "fish",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "dog",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "fish",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "fish",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "rabbit",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "fish",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "cat",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "fish",
+          "value": "NO"
+        }
+      ],
+      "grammarNote": "Use 'has' with he, she, or a name: 'Mom has a bird.' Always use the indefinite article 'a' before a countable pet noun: 'a cat', 'a dog', 'a fish'. To negate, use 'does not have': 'Dad does not have a cat.'"
+    },
+    {
+      "title": "Family members and pets (2)",
+      "themeSlug": "family",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to have",
+        "nouns",
+        "possessive pronouns his/her"
+      ],
+      "categories": [
+        {
+          "label": "Family",
+          "emoji": "👨‍👩‍👧",
+          "order": 0
+        },
+        {
+          "label": "Pets",
+          "emoji": "🐾",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "mom",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "grandpa",
+          "emoji": "👴"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "brother",
+          "emoji": "👦"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "sister",
+          "emoji": "👧"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "baby",
+          "emoji": "👶"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "cat",
+          "emoji": "🐱"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "dog",
+          "emoji": "🐶"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "bird",
+          "emoji": "🐦"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "rabbit",
+          "emoji": "🐰"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "hamster",
+          "emoji": "🐹"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👴 Grandpa has a cat.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👶 The baby has a hamster.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Mom does not have a bird.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👩 Mom does not have a rabbit.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👦 Brother does not have a bird.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "dog",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "hamster",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "cat",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "hamster",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "rabbit",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "hamster",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "bird",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "hamster",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "hamster",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "The possessive pronoun 'her' replaces a female name, and 'his' replaces a male name. 'Mom does not have a bird' can also be said as 'Her pet is not a bird.' Both sentences mean the same thing — one uses a name, the other uses a pronoun."
+    },
+    {
+      "title": "Family members and pets (3)",
+      "themeSlug": "family",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to have",
+        "nouns",
+        "possessive pronouns his/her"
+      ],
+      "categories": [
+        {
+          "label": "Family",
+          "emoji": "👨‍👩‍👧",
+          "order": 0
+        },
+        {
+          "label": "Pets",
+          "emoji": "🐾",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "dad",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "sister",
+          "emoji": "👧"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "grandma",
+          "emoji": "👵"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "brother",
+          "emoji": "👦"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "baby",
+          "emoji": "👶"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "cat",
+          "emoji": "🐱"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "dog",
+          "emoji": "🐶"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "bird",
+          "emoji": "🐦"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "rabbit",
+          "emoji": "🐰"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "fish",
+          "emoji": "🐟"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👵 Grandma has a fish.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👧 Her pet is a bird.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Dad does not have a cat.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Dad does not have a rabbit.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👶 The baby does not have a cat.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "dog",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "fish",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "bird",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "fish",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandma",
+          "colItemLabel": "fish",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "cat",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "rabbit",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "fish",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "cat",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "dog",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "bird",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "rabbit",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "fish",
+          "value": "NO"
+        }
+      ],
+      "grammarNote": "'Her pet is a bird' uses the possessive pronoun 'her' to refer to sister, who was named in the previous clue. In English, pronouns must match the gender: 'her' for females, 'his' for males. Using pronouns avoids repeating the name and sounds more natural."
+    },
+    {
+      "title": "Family members and colors (1)",
+      "themeSlug": "family",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to be",
+        "adjectives",
+        "possessive pronouns his/her"
+      ],
+      "categories": [
+        {
+          "label": "Family",
+          "emoji": "👨‍👩‍👧",
+          "order": 0
+        },
+        {
+          "label": "Favorite colors",
+          "emoji": "🎨",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "mom",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "grandpa",
+          "emoji": "👴"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "dad",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "brother",
+          "emoji": "👦"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "sister",
+          "emoji": "👧"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "red",
+          "emoji": "🔴"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "green",
+          "emoji": "🟢"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "blue",
+          "emoji": "🔵"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "yellow",
+          "emoji": "🟡"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "purple",
+          "emoji": "🟣"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👩 Mom's favorite color is red.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👴 His favorite color is green.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Dad's favorite color is not purple.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Dad's favorite color is not blue.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👧 Her favorite color is not blue.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "red",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "green",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "grandpa",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "yellow",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "blue",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "purple",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "red",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "green",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "blue",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "yellow",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "purple",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'His favorite color is green' uses 'his' to refer to grandpa. Notice the structure: possessive pronoun + noun + 'is' + adjective. In English, color words are always adjectives — they never change form: 'His color is green', not 'His color is greens'."
+    },
+    {
+      "title": "Family members and toys (1)",
+      "themeSlug": "family",
+      "levelCode": "PRE",
+      "languageCode": "en",
+      "gridSize": 5,
+      "narrativeIntro": null,
+      "grammarFocus": [
+        "verb to have",
+        "nouns",
+        "possessive pronouns his/her"
+      ],
+      "categories": [
+        {
+          "label": "Family",
+          "emoji": "👨‍👩‍👧",
+          "order": 0
+        },
+        {
+          "label": "Toys",
+          "emoji": "🧸",
+          "order": 1
+        }
+      ],
+      "items": [
+        {
+          "categoryIndex": 0,
+          "label": "dad",
+          "emoji": "👨"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "sister",
+          "emoji": "👧"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "baby",
+          "emoji": "👶"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "mom",
+          "emoji": "👩"
+        },
+        {
+          "categoryIndex": 0,
+          "label": "brother",
+          "emoji": "👦"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "ball",
+          "emoji": "⚽"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "doll",
+          "emoji": "🪆"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "car",
+          "emoji": "🚗"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "kite",
+          "emoji": "🪁"
+        },
+        {
+          "categoryIndex": 1,
+          "label": "puzzle",
+          "emoji": "🧩"
+        }
+      ],
+      "clues": [
+        {
+          "text": "👶 The baby has a doll.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👩 Mom has a kite.",
+          "clueType": "positive"
+        },
+        {
+          "text": "👨 Dad does not have a ball.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👨 Dad does not have a puzzle.",
+          "clueType": "negative"
+        },
+        {
+          "text": "👧 Her toy is not a puzzle.",
+          "clueType": "negative"
+        }
+      ],
+      "solution": [
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "ball",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "doll",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "car",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "kite",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "dad",
+          "colItemLabel": "puzzle",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "ball",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "doll",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "car",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "kite",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "sister",
+          "colItemLabel": "puzzle",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "ball",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "doll",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "car",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "kite",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "baby",
+          "colItemLabel": "puzzle",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "ball",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "doll",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "car",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "kite",
+          "value": "YES"
+        },
+        {
+          "rowItemLabel": "mom",
+          "colItemLabel": "puzzle",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "ball",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "doll",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "car",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "kite",
+          "value": "NO"
+        },
+        {
+          "rowItemLabel": "brother",
+          "colItemLabel": "puzzle",
+          "value": "YES"
+        }
+      ],
+      "grammarNote": "'Her toy is not a puzzle' uses the possessive pronoun 'her' to refer to sister. The structure is: possessive pronoun + noun + 'is not' + article + noun. Compare with the verb 'have': 'She does not have a puzzle.' Both sentences express the same fact — one uses 'to be', the other uses 'to have'."
+    }
+  ]
+}

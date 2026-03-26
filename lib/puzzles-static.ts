@@ -15,6 +15,9 @@ import * as path from "path";
 // JSON types (mirrors seed-puzzles format)
 // ---------------------------------------------------------------------------
 
+type SolutionRowLogic = { itemLabels: string[]; value: "YES" };
+type SolutionRowSimple = { rowItemLabel: string; colItemLabel: string; value: "YES" | "NO" };
+
 interface PuzzleJSON {
   title: string;
   themeSlug: string;
@@ -27,7 +30,7 @@ interface PuzzleJSON {
   categories: { label: string; emoji: string | null; order: number }[];
   items: { categoryIndex: number; label: string; emoji: string | null }[];
   clues: { text: string; clueType: string }[];
-  solution: { itemLabels: string[]; value: "YES" }[];
+  solution: SolutionRowLogic[] | SolutionRowSimple[];
   grammarNote: string | null;
 }
 
@@ -126,7 +129,7 @@ const LANGUAGE_NAMES: Record<string, string> = {
 };
 
 const LEVEL_ORDER: Record<string, number> = {
-  A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6,
+  PRE: 0, A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6,
 };
 
 function themeNameFromSlug(slug: string): string {
@@ -192,35 +195,49 @@ export function getAllPuzzles(): StaticPuzzle[] {
       const yesSet = new Set<string>();
       const solutionMap: Record<string, "YES" | "NO"> = {};
 
-      // YES pairs
-      for (const row of p.solution) {
-        const resolvedItems = row.itemLabels.map((lbl) => itemByLabel[lbl]);
-        for (let i = 0; i < resolvedItems.length; i++) {
-          for (let j = i + 1; j < resolvedItems.length; j++) {
-            const a = resolvedItems[i].id;
-            const b = resolvedItems[j].id;
-            const key = a < b ? `${a}__${b}` : `${b}__${a}`;
-            solutionMap[key] = "YES";
-            yesSet.add(key);
+      const isSimpleFormat = p.solution.length > 0 && "rowItemLabel" in p.solution[0];
+
+      if (isSimpleFormat) {
+        // Simple format: every cell is explicit { rowItemLabel, colItemLabel, value }
+        for (const row of p.solution as SolutionRowSimple[]) {
+          const itemA = itemByLabel[row.rowItemLabel];
+          const itemB = itemByLabel[row.colItemLabel];
+          if (!itemA || !itemB) continue;
+          const key = itemA.id < itemB.id ? `${itemA.id}__${itemB.id}` : `${itemB.id}__${itemA.id}`;
+          solutionMap[key] = row.value;
+          if (row.value === "YES") yesSet.add(key);
+        }
+      } else {
+        // Logic format: only YES pairs listed; NOs are inferred
+        for (const row of p.solution as SolutionRowLogic[]) {
+          const resolvedItems = row.itemLabels.map((lbl: string) => itemByLabel[lbl]);
+          for (let i = 0; i < resolvedItems.length; i++) {
+            for (let j = i + 1; j < resolvedItems.length; j++) {
+              const a = resolvedItems[i].id;
+              const b = resolvedItems[j].id;
+              const key = a < b ? `${a}__${b}` : `${b}__${a}`;
+              solutionMap[key] = "YES";
+              yesSet.add(key);
+            }
           }
         }
-      }
 
-      // NO pairs — all category pairs not in YES
-      const categoryCount = p.categories.length;
-      const itemsByCategory: StaticItem[][] = Array.from({ length: categoryCount }, () => []);
-      for (const item of p.items) {
-        itemsByCategory[item.categoryIndex].push(itemByLabel[item.label]);
-      }
+        // NO pairs — all category pairs not in YES
+        const categoryCount = p.categories.length;
+        const itemsByCategory: StaticItem[][] = Array.from({ length: categoryCount }, () => []);
+        for (const item of p.items) {
+          itemsByCategory[item.categoryIndex].push(itemByLabel[item.label]);
+        }
 
-      for (let catA = 0; catA < categoryCount; catA++) {
-        for (let catB = catA + 1; catB < categoryCount; catB++) {
-          for (const itemA of itemsByCategory[catA]) {
-            for (const itemB of itemsByCategory[catB]) {
-              const key = itemA.id < itemB.id
-                ? `${itemA.id}__${itemB.id}`
-                : `${itemB.id}__${itemA.id}`;
-              if (!yesSet.has(key)) solutionMap[key] = "NO";
+        for (let catA = 0; catA < categoryCount; catA++) {
+          for (let catB = catA + 1; catB < categoryCount; catB++) {
+            for (const itemA of itemsByCategory[catA]) {
+              for (const itemB of itemsByCategory[catB]) {
+                const key = itemA.id < itemB.id
+                  ? `${itemA.id}__${itemB.id}`
+                  : `${itemB.id}__${itemA.id}`;
+                if (!yesSet.has(key)) solutionMap[key] = "NO";
+              }
             }
           }
         }
@@ -261,10 +278,13 @@ export function getPuzzleById(id: string): StaticPuzzle | null {
 
 export function getFirstPuzzleId(): string | null {
   const puzzles = getAllPuzzles();
-  const en = puzzles
-    .filter((p) => p.languageCode === "en" && p.levelCode === "A1")
-    .sort((a, b) => a.title.localeCompare(b.title));
-  return en[0]?.id ?? puzzles[0]?.id ?? null;
+  for (const level of ["PRE", "A1"]) {
+    const match = puzzles
+      .filter((p) => p.languageCode === "en" && p.levelCode === level)
+      .sort((a, b) => a.title.localeCompare(b.title));
+    if (match[0]) return match[0].id;
+  }
+  return puzzles[0]?.id ?? null;
 }
 
 export function getNextPuzzle(
