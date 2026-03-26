@@ -41,3 +41,4 @@ next-env.d.ts
 
 # Local plans — not tracked in git
 /plans/
+action_plan.md
