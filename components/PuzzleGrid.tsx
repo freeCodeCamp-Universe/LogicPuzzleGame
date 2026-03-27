@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect, useMemo } from "react";
+import { useState, useCallback, useMemo } from "react";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -162,11 +162,25 @@ function Cell({ display, onClick, ariaLabel, bandAlt = false, waveDelay = 0, wav
 // Header cell with emoji + label
 // ---------------------------------------------------------------------------
 
-function HeaderLabel({ item }: { item: GridItem }) {
+function ColHeaderLabel({ item }: { item: GridItem }) {
   return (
-    <div className="flex flex-col items-center gap-0.5 text-sm font-mono text-fcc-fg-primary">
-      {item.emoji && <span className="text-base leading-none">{item.emoji}</span>}
-      <span className="whitespace-nowrap text-center leading-tight">{item.label}</span>
+    <div className="flex flex-col items-center gap-1 py-1">
+      {item.emoji && <span className="text-sm leading-none">{item.emoji}</span>}
+      <span
+        className="text-xs font-mono text-fcc-fg-primary leading-tight"
+        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
+      >
+        {item.label}
+      </span>
+    </div>
+  );
+}
+
+function RowHeaderLabel({ item }: { item: GridItem }) {
+  return (
+    <div className="flex items-center justify-end gap-1 text-sm font-mono text-fcc-fg-primary">
+      <span className="leading-tight text-right">{item.label}</span>
+      {item.emoji && <span className="text-base leading-none shrink-0">{item.emoji}</span>}
     </div>
   );
 }
@@ -187,16 +201,6 @@ export default function PuzzleGrid({
   onCellChange,
 }: PuzzleGridProps) {
   const [grid, setGrid] = useState<GridState>({});
-  const [colWidth, setColWidth] = useState<number | null>(null);
-  const headerRowRef = useRef<HTMLTableRowElement>(null);
-  // After render, find the widest column header and apply that width to all
-  useEffect(() => {
-    if (!headerRowRef.current) return;
-    const ths = Array.from(headerRowRef.current.querySelectorAll("th[data-col-header]"));
-    if (ths.length === 0) return;
-    const max = Math.max(...ths.map((th) => (th as HTMLElement).offsetWidth));
-    if (max > 0) setColWidth(max);
-  }, [categories, items]);
 
   // Build lookup: categoryId → items[]
   const itemsByCategory: Record<string, GridItem[]> = {};
@@ -318,19 +322,17 @@ export default function PuzzleGrid({
           </tr>
 
           {/* Row 2: individual item headers for columns */}
-          <tr ref={headerRowRef}>
+          <tr>
             <th className="border-0 w-6" />
             <th className="border-0" />
             {colCategories.flatMap((colCat, colCatIdx) =>
               (itemsByCategory[colCat.id] ?? []).map((colItem) => (
                 <th
                   key={colItem.id}
-                  data-col-header
-                  className={`px-2 py-3 align-bottom border border-fcc-bg-quaternary ${colCatIdx % 2 === 0 ? "bg-fcc-bg-primary" : "bg-fcc-bg-tertiary"}`}
-                  style={colWidth ? { width: colWidth } : undefined}
+                  className={`w-10 px-0 py-1 align-bottom border border-fcc-bg-quaternary ${colCatIdx % 2 === 0 ? "bg-fcc-bg-primary" : "bg-fcc-bg-tertiary"}`}
                   scope="col"
                 >
-                  <HeaderLabel item={colItem} />
+                  <ColHeaderLabel item={colItem} />
                 </th>
               ))
             )}
@@ -365,9 +367,9 @@ export default function PuzzleGrid({
                   {/* Row item label */}
                   <th
                     scope="row"
-                    className={`p-1 pr-2 text-right border border-fcc-bg-quaternary min-w-[60px] ${rowCatIdx % 2 === 0 ? "bg-fcc-bg-primary" : "bg-fcc-bg-tertiary"}`}
+                    className={`p-1 pr-2 border border-fcc-bg-quaternary min-w-[60px] max-w-[120px] ${rowCatIdx % 2 === 0 ? "bg-fcc-bg-primary" : "bg-fcc-bg-tertiary"}`}
                   >
-                    <HeaderLabel item={rowItem} />
+                    <RowHeaderLabel item={rowItem} />
                   </th>
 
                   {/* Cells for each column category */}

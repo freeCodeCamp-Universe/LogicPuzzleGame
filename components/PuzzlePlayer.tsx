@@ -144,6 +144,7 @@ export default function PuzzlePlayer({
   const [timerStarted, setTimerStarted] = useState(false);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [showTutorial, setShowTutorial] = useState(false);
+  const [filterOpen, setFilterOpen] = useState(false);
 
   // Check tutorial status on mount
   useEffect(() => {
@@ -267,8 +268,9 @@ export default function PuzzlePlayer({
 
       {/* ── Filter bar ── */}
       <div className="border-b border-fcc-bg-tertiary bg-fcc-bg-tertiary">
-        <div className="max-w-5xl mx-auto px-4 py-2 flex flex-wrap items-center gap-4 justify-between">
-          <div className="flex flex-wrap items-center gap-4">
+        <div className="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
+          {/* Desktop: dropdowns inline */}
+          <div className="hidden sm:flex flex-wrap items-center gap-4">
             <FilterDropdown
               label="Language"
               value={languageCode}
@@ -297,7 +299,60 @@ export default function PuzzlePlayer({
               onChange={handlePuzzleChange}
             />
           </div>
+
+          {/* Mobile: current context label + filter icon */}
+          <div className="flex sm:hidden items-center gap-2 flex-1">
+            <span className="font-mono text-sm text-fcc-fg-secondary truncate">
+              {languageCode.toUpperCase()} · {levelCode} · {filterContext.themes.find((t) => t.id === currentThemeId)?.name ?? ""}
+            </span>
+          </div>
+          <button
+            type="button"
+            onClick={() => setFilterOpen((v) => !v)}
+            className="sm:hidden flex items-center gap-1.5 font-mono text-sm text-fcc-fg-secondary border border-fcc-bg-quaternary rounded px-3 py-1.5 hover:border-fcc-fg-muted transition-colors"
+            aria-label="Filters"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="4" y1="6" x2="20" y2="6" />
+              <line x1="8" y1="12" x2="16" y2="12" />
+              <line x1="11" y1="18" x2="13" y2="18" />
+            </svg>
+            Filters
+          </button>
         </div>
+
+        {/* Mobile: filter panel (slide down) */}
+        {filterOpen && (
+          <div className="sm:hidden border-t border-fcc-bg-quaternary bg-fcc-bg-secondary px-4 py-3 flex flex-col gap-3">
+            <FilterDropdown
+              label="Language"
+              value={languageCode}
+              options={filterContext.languages.map((l) => ({ value: l.code, label: l.name }))}
+              onChange={(v) => { handleLangChange(v); setFilterOpen(false); }}
+            />
+            <FilterDropdown
+              label="Level"
+              value={levelCode}
+              options={filterContext.levels.map((l) => ({ value: l.code, label: l.code }))}
+              onChange={(v) => { handleLevelChange(v); setFilterOpen(false); }}
+            />
+            <FilterDropdown
+              label="Category"
+              value={currentThemeId}
+              options={filterContext.themes.map((t) => ({ value: t.id, label: t.name }))}
+              onChange={(v) => { handleThemeChange(v); setFilterOpen(false); }}
+            />
+            <FilterDropdown
+              label="Puzzle"
+              value={puzzleId}
+              options={filterContext.puzzlesInTheme.map((p) => ({
+                value: p.id,
+                label: p.title,
+              }))}
+              onChange={(v) => { handlePuzzleChange(v); setFilterOpen(false); }}
+            />
+          </div>
+        )}
       </div>
 
       {/* ── Tutorial overlay ── */}
@@ -338,7 +393,7 @@ export default function PuzzlePlayer({
             <p className="font-mono text-xs font-bold text-fcc-fg-muted uppercase tracking-widest mb-2">
               Clues — click any sentence to hear it
             </p>
-            <div className="bg-fcc-bg-tertiary rounded p-3 mt-2">
+            <div className="bg-fcc-bg-tertiary rounded p-3 mt-2 max-h-48 overflow-y-auto">
               <ClueList clues={clues} lang={lang} />
             </div>
           </div>
