@@ -253,32 +253,15 @@ export default function PuzzlePlayer({
 
       {/* ── Header ── */}
       <header className="border-b border-fcc-bg-tertiary bg-fcc-bg-primary">
-        <div className="max-w-5xl mx-auto px-4 py-3 grid grid-cols-3 items-center gap-4">
-          {/* Left: fCC logo */}
-          <div>
-            <Image
-              src={`${basePath}/fcc_primary_large.svg`}
-              alt="freeCodeCamp"
-              width={160}
-              height={18}
-              unoptimized
-              priority
-            />
-          </div>
-          {/* Center: LinguaGrid title */}
-          <div className="flex justify-center">
-            <span className="font-mono font-bold text-fcc-fg-primary text-2xl">LinguaGrid</span>
-          </div>
-          {/* Right: How to play */}
-          <div className="flex justify-end items-center gap-3">
-            <button
-              type="button"
-              onClick={() => setShowTutorial(true)}
-              className="font-mono font-bold text-sm rounded px-4 py-2 bg-fcc-blue text-fcc-blue-dark hover:opacity-90 transition-opacity"
-            >
-              How to play
-            </button>
-          </div>
+        <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
+          <span className="font-mono font-bold text-fcc-fg-primary text-2xl">LinguaGrid</span>
+          <button
+            type="button"
+            onClick={() => setShowTutorial(true)}
+            className="font-mono font-bold text-sm rounded px-4 py-2 bg-fcc-blue text-fcc-blue-dark hover:opacity-90 transition-opacity"
+          >
+            How to play
+          </button>
         </div>
       </header>
 
