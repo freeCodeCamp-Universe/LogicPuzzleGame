@@ -145,6 +145,10 @@ export default function PuzzlePlayer({
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const [showTutorial, setShowTutorial] = useState(false);
   const [filterOpen, setFilterOpen] = useState(false);
+  const [grammarOpen, setGrammarOpen] = useState(false);
+  useEffect(() => {
+    setGrammarOpen(window.innerWidth >= 640);
+  }, []);
 
   // Check tutorial status on mount
   useEffect(() => {
@@ -263,65 +267,22 @@ export default function PuzzlePlayer({
           >
             How to play
           </button>
-        </div>
-      </header>
-
-      {/* ── Filter bar ── */}
-      <div className="border-b border-fcc-bg-tertiary bg-fcc-bg-tertiary">
-        <div className="max-w-5xl mx-auto px-4 py-2 flex items-center justify-between gap-4">
-          {/* Desktop: dropdowns inline */}
-          <div className="hidden sm:flex flex-wrap items-center gap-4">
-            <FilterDropdown
-              label="Language"
-              value={languageCode}
-              options={filterContext.languages.map((l) => ({ value: l.code, label: l.name }))}
-              onChange={handleLangChange}
-            />
-            <FilterDropdown
-              label="Level"
-              value={levelCode}
-              options={filterContext.levels.map((l) => ({ value: l.code, label: l.code }))}
-              onChange={handleLevelChange}
-            />
-            <FilterDropdown
-              label="Category"
-              value={currentThemeId}
-              options={filterContext.themes.map((t) => ({ value: t.id, label: t.name }))}
-              onChange={handleThemeChange}
-            />
-            <FilterDropdown
-              label="Puzzle"
-              value={puzzleId}
-              options={filterContext.puzzlesInTheme.map((p) => ({
-                value: p.id,
-                label: p.title,
-              }))}
-              onChange={handlePuzzleChange}
-            />
-          </div>
-
-          {/* Mobile: current context label + filter icon */}
-          <div className="flex sm:hidden items-center gap-2 flex-1">
-            <span className="font-mono text-sm text-fcc-fg-secondary truncate">
-              {languageCode.toUpperCase()} · {levelCode} · {filterContext.themes.find((t) => t.id === currentThemeId)?.name ?? ""}
-            </span>
-          </div>
+          {/* Mobile: filter icon in header */}
           <button
             type="button"
             onClick={() => setFilterOpen((v) => !v)}
-            className="sm:hidden flex items-center gap-1.5 font-mono text-sm text-fcc-fg-secondary border border-fcc-bg-quaternary rounded px-3 py-1.5 hover:border-fcc-fg-muted transition-colors"
+            className="sm:hidden flex items-center justify-center text-fcc-fg-secondary border border-fcc-bg-quaternary rounded p-2 hover:border-fcc-fg-muted transition-colors"
             aria-label="Filters"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <line x1="4" y1="6" x2="20" y2="6" />
               <line x1="8" y1="12" x2="16" y2="12" />
               <line x1="11" y1="18" x2="13" y2="18" />
             </svg>
-            Filters
           </button>
         </div>
 
-        {/* Mobile: filter panel (slide down) */}
+        {/* Mobile: filter panel (drops from header) */}
         {filterOpen && (
           <div className="sm:hidden border-t border-fcc-bg-quaternary bg-fcc-bg-secondary px-4 py-3 flex flex-col gap-3">
             <FilterDropdown
@@ -353,6 +314,39 @@ export default function PuzzlePlayer({
             />
           </div>
         )}
+      </header>
+
+      {/* ── Filter bar (desktop only) ── */}
+      <div className="hidden sm:block border-b border-fcc-bg-tertiary bg-fcc-bg-tertiary">
+        <div className="max-w-5xl mx-auto px-4 py-2 flex flex-wrap items-center gap-4">
+          <FilterDropdown
+            label="Language"
+            value={languageCode}
+            options={filterContext.languages.map((l) => ({ value: l.code, label: l.name }))}
+            onChange={handleLangChange}
+          />
+          <FilterDropdown
+            label="Level"
+            value={levelCode}
+            options={filterContext.levels.map((l) => ({ value: l.code, label: l.code }))}
+            onChange={handleLevelChange}
+          />
+          <FilterDropdown
+            label="Category"
+            value={currentThemeId}
+            options={filterContext.themes.map((t) => ({ value: t.id, label: t.name }))}
+            onChange={handleThemeChange}
+          />
+          <FilterDropdown
+            label="Puzzle"
+            value={puzzleId}
+            options={filterContext.puzzlesInTheme.map((p) => ({
+              value: p.id,
+              label: p.title,
+            }))}
+            onChange={handlePuzzleChange}
+          />
+        </div>
       </div>
 
       {/* ── Tutorial overlay ── */}
@@ -393,21 +387,32 @@ export default function PuzzlePlayer({
             <p className="font-mono text-xs font-bold text-fcc-fg-muted uppercase tracking-widest mb-2">
               Clues — click any sentence to hear it
             </p>
-            <div className="bg-fcc-bg-tertiary rounded p-3 mt-2 max-h-48 overflow-y-auto">
+            <div className="bg-fcc-bg-tertiary rounded p-3 mt-2 sm:max-h-none sm:overflow-visible max-h-48 overflow-y-auto">
               <ClueList clues={clues} lang={lang} />
             </div>
           </div>
         </section>
 
-        {/* Grammar note — shown after solve */}
+        {/* Grammar note */}
         {grammarNote && (
           <section aria-label="Grammar note">
-            <div className="w-fit p-4 rounded border border-fcc-bg-quaternary bg-fcc-bg-primary">
-              <p className="font-mono text-xs font-bold text-fcc-fg-muted uppercase tracking-widest mb-2">
+            <details
+              className="w-fit rounded border border-fcc-bg-quaternary bg-fcc-bg-primary"
+              open={grammarOpen}
+              onToggle={(e) => setGrammarOpen((e.currentTarget as HTMLDetailsElement).open)}
+            >
+              <summary className="px-4 py-4 font-mono text-xs font-bold text-fcc-fg-muted uppercase tracking-widest cursor-pointer list-none flex items-center gap-2 [&::-webkit-details-marker]:hidden">
+                <Image
+                  src={grammarOpen ? `${basePath}/icons/arrow_drop_down.svg` : `${basePath}/icons/arrow_right.svg`}
+                  alt=""
+                  width={22}
+                  height={22}
+                  className="opacity-60 invert"
+                />
                 Grammar note
-              </p>
-              <p className="text-fcc-fg-primary">{grammarNote}</p>
-            </div>
+              </summary>
+              <p className="px-4 pt-0 pb-4 text-fcc-fg-primary">{grammarNote}</p>
+            </details>
           </section>
         )}
       </main>

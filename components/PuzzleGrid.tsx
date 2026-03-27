@@ -112,7 +112,7 @@ interface CellProps {
 
 function Cell({ display, onClick, ariaLabel, bandAlt = false, waveDelay = 0, wave = false, highlighted = false, tutorialDimmed = false }: CellProps) {
   const base =
-    "block w-full min-h-[52px] flex items-center justify-center font-bold text-base select-none transition-colors";
+    "block w-full aspect-square flex items-center justify-center font-bold text-base select-none transition-colors";
 
   const emptyStyle = bandAlt
     ? "bg-fcc-bg-primary hover:bg-fcc-bg-secondary cursor-pointer"
@@ -127,7 +127,7 @@ function Cell({ display, onClick, ariaLabel, bandAlt = false, waveDelay = 0, wav
   };
 
   const labels: Record<DisplayState, string> = {
-    empty:     "—",
+    empty:     "",
     YES:       "✓",
     NO_manual: "✗",
     NO_auto:   "✗",
@@ -162,16 +162,20 @@ function Cell({ display, onClick, ariaLabel, bandAlt = false, waveDelay = 0, wav
 // Header cell with emoji + label
 // ---------------------------------------------------------------------------
 
+function capitalize(s: string) {
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
 function ColHeaderLabel({ item }: { item: GridItem }) {
   return (
     <div className="flex flex-col items-center gap-1 py-1">
-      {item.emoji && <span className="text-sm leading-none">{item.emoji}</span>}
       <span
-        className="text-xs font-mono text-fcc-fg-primary leading-tight"
+        className="text-sm font-mono text-fcc-fg-primary leading-tight"
         style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
       >
-        {item.label}
+        {capitalize(item.label)}
       </span>
+      {item.emoji && <span className="text-base leading-none">{item.emoji}</span>}
     </div>
   );
 }
@@ -179,7 +183,7 @@ function ColHeaderLabel({ item }: { item: GridItem }) {
 function RowHeaderLabel({ item }: { item: GridItem }) {
   return (
     <div className="flex items-center justify-end gap-1 text-sm font-mono text-fcc-fg-primary">
-      <span className="leading-tight text-right">{item.label}</span>
+      <span className="leading-tight text-right">{capitalize(item.label)}</span>
       {item.emoji && <span className="text-base leading-none shrink-0">{item.emoji}</span>}
     </div>
   );
@@ -329,7 +333,7 @@ export default function PuzzleGrid({
               (itemsByCategory[colCat.id] ?? []).map((colItem) => (
                 <th
                   key={colItem.id}
-                  className={`w-10 px-0 py-1 align-bottom border border-fcc-bg-quaternary ${colCatIdx % 2 === 0 ? "bg-fcc-bg-primary" : "bg-fcc-bg-tertiary"}`}
+                  className={`w-12 px-0 py-1 align-bottom border border-fcc-bg-quaternary ${colCatIdx % 2 === 0 ? "bg-fcc-bg-primary" : "bg-fcc-bg-tertiary"}`}
                   scope="col"
                 >
                   <ColHeaderLabel item={colItem} />

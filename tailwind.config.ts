@@ -20,6 +20,7 @@ const config: Config = {
           "bg-secondary":  "#1b1b32",
           "bg-tertiary":   "#2a2a40",
           "bg-quaternary": "#3b3b4f",
+          "bg-quinary":    "#525268",
           // Foregrounds
           "fg-primary":    "#ffffff",
           "fg-secondary":  "#f5f6f7",
