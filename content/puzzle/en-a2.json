@@ -476,7 +476,7 @@
           "clueType": "relational"
         },
         { "text": "Alice does not drink soda.", "clueType": "negative" },
-        { "text": "Clara does not drink wine.", "clueType": "negative" },
+        { "text": "Dan does not drink soda.", "clueType": "negative" },
         { "text": "Dan does not drink juice.", "clueType": "negative" }
       ],
       "solution": [
