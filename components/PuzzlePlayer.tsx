@@ -455,13 +455,22 @@ export default function PuzzlePlayer({
                 {mistakeCount === 1 ? "mistake" : "mistakes"}. Review the clues and try again.
               </p>
             </div>
-            <button
-              type="button"
-              onClick={handleRestart}
-              className="w-full px-5 py-2.5 font-mono font-bold text-base rounded bg-fcc-yellow text-fcc-yellow-dark hover:opacity-90 transition-opacity"
-            >
-              Restart puzzle
-            </button>
+            <div className="w-full flex flex-col gap-3">
+              <button
+                type="button"
+                onClick={() => setModalState("idle")}
+                className="w-full px-5 py-2.5 font-mono font-bold text-base rounded bg-fcc-yellow text-fcc-yellow-dark hover:opacity-90 transition-opacity"
+              >
+                Continue
+              </button>
+              <button
+                type="button"
+                onClick={handleRestart}
+                className="w-full px-5 py-2.5 font-mono font-bold text-base rounded border border-fcc-bg-quaternary text-fcc-fg-muted hover:text-fcc-fg-primary hover:border-fcc-fg-muted transition-colors"
+              >
+                Restart puzzle
+              </button>
+            </div>
           </div>
         </div>
       )}
