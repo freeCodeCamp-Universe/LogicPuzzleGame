@@ -35,7 +35,7 @@
         { "text": "Priya worked more night shifts than anyone else.", "clueType": "positive" },
         { "text": "Priya didn't work 35 hours last week.", "clueType": "negative" },
         { "text": "Sam worked exactly 35 hours last week.", "clueType": "positive" },
-        { "text": "The driver worked fewer hours than the teacher.", "clueType": "relational" }
+        { "text": "The teacher worked fewer hours than the driver.", "clueType": "relational" }
       ],
       "solution": [
         { "itemLabels": ["Mia", "teacher", "30 hours"], "value": "YES" },
@@ -166,7 +166,7 @@
         { "text": "Diana worked the most hours of the four last week.", "clueType": "positive" },
         { "text": "Diana didn't work as a pharmacist.", "clueType": "negative" },
         { "text": "Jake is currently giving medicine to patients.", "clueType": "positive" },
-        { "text": "The firefighter worked more hours than the programmer.", "clueType": "relational" },
+        { "text": "The programmer worked more hours than the firefighter.", "clueType": "relational" },
         { "text": "The programmer worked more hours than the pharmacist.", "clueType": "relational" },
         { "text": "Rosa didn't work 52 hours last week.", "clueType": "negative" },
         { "text": "Will is not working as an architect.", "clueType": "negative" },
@@ -391,7 +391,7 @@
         { "text": "Dylan is currently cooking dinner more quickly than before.", "clueType": "positive" },
         { "text": "The device that saves energy controls the temperature at home.", "clueType": "relational" },
         { "text": "Freya didn't use a robot vacuum.", "clueType": "negative" },
-        { "text": "Miles didn't use his device for entertainment.", "clueType": "negative" },
+        { "text": "Freya didn't use her device for entertainment.", "clueType": "negative" },
         { "text": "The projector was used mainly for entertainment.", "clueType": "relational" }
       ],
       "solution": [
@@ -486,8 +486,8 @@
       "solution": [
         { "itemLabels": ["Carl", "running", "app"], "value": "YES" },
         { "itemLabels": ["Jade", "meditation", "journal"], "value": "YES" },
-        { "itemLabels": ["Marta", "meal prep", "spreadsheet"], "value": "YES" },
-        { "itemLabels": ["Sam", "cycling", "calendar"], "value": "YES" }
+        { "itemLabels": ["Marta", "cycling", "calendar"], "value": "YES" },
+        { "itemLabels": ["Sam", "meal prep", "spreadsheet"], "value": "YES" }
       ],
       "grammarNote": "'Ran more kilometres than the month before' uses the irregular simple past of 'run'. Many common verbs are irregular: run→ran, write→wrote, take→took. These must be memorised as they don't follow the regular -ed pattern."
     },
