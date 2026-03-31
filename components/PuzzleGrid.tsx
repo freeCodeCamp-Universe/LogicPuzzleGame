@@ -357,10 +357,10 @@ export default function PuzzleGrid({
                   {rowItemIdx === 0 && (
                     <td
                       rowSpan={rowItems.length}
-                      className="w-6 text-center align-middle border-r border-fcc-bg-quaternary overflow-hidden"
+                      className="w-6 text-center align-middle border-r border-fcc-bg-quaternary"
                     >
                       <span
-                        className="font-mono text-base font-bold text-fcc-fg-secondary px-1 whitespace-nowrap"
+                        className="font-mono text-base font-bold text-fcc-fg-secondary px-1 leading-none whitespace-nowrap"
                         style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}
                       >
                         {rowCat.emoji ? `${rowCat.emoji} ${rowCat.label}` : rowCat.label}
