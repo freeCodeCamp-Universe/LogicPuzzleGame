@@ -112,7 +112,7 @@ interface CellProps {
 
 function Cell({ display, onClick, ariaLabel, bandAlt = false, waveDelay = 0, wave = false, highlighted = false, tutorialDimmed = false }: CellProps) {
   const base =
-    "block w-full aspect-square flex items-center justify-center font-bold text-base select-none transition-colors";
+    "block w-full h-full min-h-[3rem] flex items-center justify-center font-bold text-base select-none transition-colors";
 
   const emptyStyle = bandAlt
     ? "bg-fcc-bg-primary hover:bg-fcc-bg-secondary cursor-pointer"
@@ -357,7 +357,7 @@ export default function PuzzleGrid({
                   {rowItemIdx === 0 && (
                     <td
                       rowSpan={rowItems.length}
-                      className="w-6 text-center align-middle border-r border-fcc-bg-quaternary"
+                      className="w-6 text-center align-middle border-r border-fcc-bg-quaternary overflow-hidden"
                     >
                       <span
                         className="font-mono text-base font-bold text-fcc-fg-secondary px-1 whitespace-nowrap"
@@ -386,7 +386,7 @@ export default function PuzzleGrid({
 
                     if (shouldBlock) {
                       return colItems.map((colItem) => (
-                        <td key={colItem.id} className="p-0 border border-transparent">
+                        <td key={colItem.id} className="p-0 h-px border border-transparent">
                           <Cell
                             display="blocked"
                             onClick={() => {}}
@@ -404,7 +404,7 @@ export default function PuzzleGrid({
                       const tutorialDimmed = tutorialTargetKey !== null && !tutorialFreeSolve && !highlighted;
 
                       return (
-                        <td key={colItem.id} className="p-0 border border-fcc-bg-quaternary">
+                        <td key={colItem.id} className="p-0 h-px border border-fcc-bg-quaternary">
                           <Cell
                             display={display}
                             onClick={() => handleClick(rowItem, colItem)}
