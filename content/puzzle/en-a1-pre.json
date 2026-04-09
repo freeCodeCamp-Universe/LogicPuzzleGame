@@ -19,8 +19,8 @@
           "order": 0
         },
         {
-          "label": "Colors",
-          "emoji": "🎨",
+          "label": "Collars",
+          "emoji": "🎀",
           "order": 1
         }
       ],
@@ -78,19 +78,19 @@
       ],
       "clues": [
         {
-          "text": "🐱 The cat is yellow.",
+          "text": "🐱 The cat's collar is yellow.",
           "clueType": "positive"
         },
         {
-          "text": "🐟 The fish is blue.",
+          "text": "🐟 The fish's collar is blue.",
           "clueType": "positive"
         },
         {
-          "text": "🐦 The bird is green.",
+          "text": "🐦 The bird's collar is green.",
           "clueType": "positive"
         },
         {
-          "text": "🐶 The dog is not red.",
+          "text": "🐶 The dog's collar is not red.",
           "clueType": "negative"
         }
       ],
@@ -221,7 +221,7 @@
           "value": "NO"
         }
       ],
-      "grammarNote": "Use 'is' to state a fact: 'The cat is yellow.' Use 'is not' to say what is false: 'The dog is not red.' Both use the verb 'to be' with a color adjective — no extra words needed."
+      "grammarNote": "Use 'is' to state a fact: 'The cat's collar is yellow.' Use 'is not' for negatives: 'The dog's collar is not red.' Both use 'to be.' Pattern: subject + 's + collar + is (not) + color."
     },
     {
       "title": "Animals and colors (2)",
@@ -242,8 +242,8 @@
           "order": 0
         },
         {
-          "label": "Colors",
-          "emoji": "🎨",
+          "label": "Collars",
+          "emoji": "🎀",
           "order": 1
         }
       ],
@@ -301,19 +301,19 @@
       ],
       "clues": [
         {
-          "text": "🦉 The owl is blue.",
+          "text": "🦉 The owl's collar is blue.",
           "clueType": "positive"
         },
         {
-          "text": "🐻 The bear is brown.",
+          "text": "🐻 The bear's collar is brown.",
           "clueType": "positive"
         },
         {
-          "text": "🐸 The frog is orange.",
+          "text": "🐸 The frog's collar is orange.",
           "clueType": "positive"
         },
         {
-          "text": "🐴 The horse is not pink.",
+          "text": "🐴 The horse's collar is not pink.",
           "clueType": "negative"
         }
       ],
@@ -444,7 +444,7 @@
           "value": "NO"
         }
       ],
-      "grammarNote": "'Gray', 'pink', and 'brown' are all color adjectives. In English, adjectives never change form — 'The horse is gray' and 'The horses are gray' use the same word. Notice: English uses 'gray', not 'grey' (though both spellings exist)."
+      "grammarNote": "Color adjectives like 'gray', 'pink', and 'brown' follow 'to be' directly: 'The bear's collar is brown.' In English, adjectives never change form — 'collar is brown' and 'collars are brown' use the same word."
     },
     {
       "title": "Animals and colors (3)",
@@ -465,8 +465,8 @@
           "order": 0
         },
         {
-          "label": "Colors",
-          "emoji": "🎨",
+          "label": "Collars",
+          "emoji": "🎀",
           "order": 1
         }
       ],
@@ -524,23 +524,23 @@
       ],
       "clues": [
         {
-          "text": "🦆 The duck is yellow.",
+          "text": "🦆 The duck's collar is yellow.",
           "clueType": "positive"
         },
         {
-          "text": "🐍 The snake is purple.",
+          "text": "🐍 The snake's collar is purple.",
           "clueType": "positive"
         },
         {
-          "text": "🐱 The cat is not pink.",
+          "text": "🐱 The cat's collar is not pink.",
           "clueType": "negative"
         },
         {
-          "text": "🐱 The cat is not black.",
+          "text": "🐱 The cat's collar is not black.",
           "clueType": "negative"
         },
         {
-          "text": "🐶 The dog is not pink.",
+          "text": "🐶 The dog's collar is not pink.",
           "clueType": "negative"
         }
       ],
@@ -671,7 +671,7 @@
           "value": "YES"
         }
       ],
-      "grammarNote": "When two negative clues point to the same animal ('The cat is not pink' and 'The cat is not black'), you can eliminate two options at once. With enough negatives, only one color remains — and that must be the answer. This deduction technique works in English grammar too: narrowing down by ruling out."
+      "grammarNote": "When two negatives point to the same animal ('The cat's collar is not pink' and 'The cat's collar is not black'), you can eliminate two options at once. Only one color remains — that must be the answer. Negation pattern: subject + 's + collar + is not + color."
     },
     {
       "title": "Animals and habitats (1)",
@@ -2054,8 +2054,8 @@
           "order": 0
         },
         {
-          "label": "Favorite colors",
-          "emoji": "🎨",
+          "label": "Balloons",
+          "emoji": "🎈",
           "order": 1
         }
       ],
@@ -2113,23 +2113,23 @@
       ],
       "clues": [
         {
-          "text": "👩 Mom's favorite color is red.",
+          "text": "👩 Mom's balloon is red.",
           "clueType": "positive"
         },
         {
-          "text": "👴 His favorite color is green.",
+          "text": "👴 His balloon is green.",
           "clueType": "positive"
         },
         {
-          "text": "👨 Dad's favorite color is not purple.",
+          "text": "👨 Dad's balloon is not purple.",
           "clueType": "negative"
         },
         {
-          "text": "👨 Dad's favorite color is not blue.",
+          "text": "👨 Dad's balloon is not blue.",
           "clueType": "negative"
         },
         {
-          "text": "👧 Her favorite color is not blue.",
+          "text": "👧 Her balloon is not blue.",
           "clueType": "negative"
         }
       ],
@@ -2260,7 +2260,7 @@
           "value": "YES"
         }
       ],
-      "grammarNote": "'His favorite color is green' uses 'his' to refer to grandpa. Notice the structure: possessive pronoun + noun + 'is' + adjective. In English, color words are always adjectives — they never change form: 'His color is green', not 'His color is greens'."
+      "grammarNote": "Use 'his' for males, 'her' for females: 'His balloon is green' means 'Grandpa's balloon is green.' Pattern: possessive pronoun + noun + is (not) + color. Color words are adjectives — they never change form."
     },
     {
       "title": "Family members and toys (1)",
