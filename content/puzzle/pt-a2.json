@@ -1,0 +1,477 @@
+{
+  "puzzles": [
+    {
+      "title": "Rotina Diária (1)",
+      "themeSlug": "Trabalho",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["substantivos", "horários", "relações", "presente simples"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Ações", "emoji": "📝", "order": 1 },
+        { "label": "Horários", "emoji": "⏰", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Ana", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Bruno", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Cida", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Davi", "emoji": "👨" },
+        { "categoryIndex": 1, "label": "reunião", "emoji": "👥" },
+        { "categoryIndex": 1, "label": "e-mail", "emoji": "✉️" },
+        { "categoryIndex": 1, "label": "chamada", "emoji": "📞" },
+        { "categoryIndex": 1, "label": "relatório", "emoji": "📄" },
+        { "categoryIndex": 2, "label": "08h", "emoji": "🕗" },
+        { "categoryIndex": 2, "label": "09h", "emoji": "🕘" },
+        { "categoryIndex": 2, "label": "10h", "emoji": "🕙" },
+        { "categoryIndex": 2, "label": "11h", "emoji": "🕚" }
+      ],
+      "clues": [
+        { "text": "A pessoa com a reunião é às 09h.", "clueType": "relational" },
+        { "text": "Bruno fica com o e-mail.", "clueType": "positive" },
+        { "text": "A tarefa das 10h é o relatório.", "clueType": "relational" },
+        { "text": "Ana não faz o relatório.", "clueType": "negative" },
+        { "text": "Cida faz a chamada.", "clueType": "positive" },
+        { "text": "Bruno está às 08h.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["Ana", "reunião", "09h"], "value": "YES" },
+        { "itemLabels": ["Bruno", "e-mail", "08h"], "value": "YES" },
+        { "itemLabels": ["Cida", "chamada", "11h"], "value": "YES" },
+        { "itemLabels": ["Davi", "relatório", "10h"], "value": "YES" }
+      ],
+      "grammarNote": "Use nomes de tarefas com horários: \"a reunião é às 09h\" e \"a tarefa das 10h é o relatório\". Para negar, use \"não\": \"Ana não faz o relatório\"."
+    },
+    {
+      "title": "Rotina Diária (2)",
+      "themeSlug": "Trabalho",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["substantivos", "lugares", "relações", "presente simples"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Ações", "emoji": "📝", "order": 1 },
+        { "label": "Lugares", "emoji": "📍", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Ana", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Bruno", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Cida", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Davi", "emoji": "👨" },
+        { "categoryIndex": 1, "label": "reunião", "emoji": "👥" },
+        { "categoryIndex": 1, "label": "e-mail", "emoji": "✉️" },
+        { "categoryIndex": 1, "label": "chamada", "emoji": "📞" },
+        { "categoryIndex": 1, "label": "relatório", "emoji": "📄" },
+        { "categoryIndex": 2, "label": "escritório", "emoji": "🏢" },
+        { "categoryIndex": 2, "label": "casa", "emoji": "🏠" },
+        { "categoryIndex": 2, "label": "sala", "emoji": "🛋️" },
+        { "categoryIndex": 2, "label": "café", "emoji": "☕" }
+      ],
+      "clues": [
+        { "text": "A reunião acontece na sala.", "clueType": "relational" },
+        { "text": "Quem está no escritório faz o relatório.", "clueType": "relational" },
+        { "text": "Cida fica no café.", "clueType": "positive" },
+        { "text": "Bruno não está no escritório.", "clueType": "negative" },
+        { "text": "A chamada não é no café.", "clueType": "negative" },
+        { "text": "Davi faz a chamada.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["Ana", "relatório", "escritório"], "value": "YES" },
+        { "itemLabels": ["Bruno", "reunião", "sala"], "value": "YES" },
+        { "itemLabels": ["Cida", "e-mail", "café"], "value": "YES" },
+        { "itemLabels": ["Davi", "chamada", "casa"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione ação e lugar: \"a reunião na sala\"; \"quem está no escritório faz o relatório\". Use negativas para eliminar opções (\"A chamada não é no café\")."
+    },
+    {
+      "title": "Viagem de Trabalho (1)",
+      "themeSlug": "Trabalho",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["destinos", "meios de transporte", "relações"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Destinos", "emoji": "🧭", "order": 1 },
+        { "label": "Transportes", "emoji": "🚌", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Lia", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Neto", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Rafa", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Sora", "emoji": "👩" },
+        { "categoryIndex": 1, "label": "Rio", "emoji": "🏖️" },
+        { "categoryIndex": 1, "label": "BH", "emoji": "⛰️" },
+        { "categoryIndex": 1, "label": "Recife", "emoji": "🏝️" },
+        { "categoryIndex": 1, "label": "Curitiba", "emoji": "🌧️" },
+        { "categoryIndex": 2, "label": "avião", "emoji": "✈️" },
+        { "categoryIndex": 2, "label": "ônibus", "emoji": "🚌" },
+        { "categoryIndex": 2, "label": "carro", "emoji": "🚗" },
+        { "categoryIndex": 2, "label": "trem", "emoji": "🚆" }
+      ],
+      "clues": [
+        { "text": "Quem vai ao Rio vai de avião.", "clueType": "relational" },
+        { "text": "Neto vai de trem.", "clueType": "positive" },
+        { "text": "Lia vai ao Rio.", "clueType": "positive" },
+        { "text": "O destino de carro é BH.", "clueType": "relational" },
+        { "text": "Rafa não vai ao Recife.", "clueType": "negative" },
+        { "text": "Neto vai a Curitiba.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["Lia", "Rio", "avião"], "value": "YES" },
+        { "itemLabels": ["Neto", "Curitiba", "trem"], "value": "YES" },
+        { "itemLabels": ["Rafa", "BH", "carro"], "value": "YES" },
+        { "itemLabels": ["Sora", "Recife", "ônibus"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione destino e transporte: \"quem vai ao Rio vai de avião\"; use positivas diretas para fixar pares: \"Lia vai ao Rio\", \"Neto vai a Curitiba\"."
+    },
+    {
+      "title": "Amigo Secreto (1)",
+      "themeSlug": "Compras",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["compras", "relações", "locais de compra"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Presentes", "emoji": "🎁", "order": 1 },
+        { "label": "Lojas", "emoji": "🏬", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Alice", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Beto", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Cida", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Davi", "emoji": "👨" },
+        { "categoryIndex": 1, "label": "livro", "emoji": "📘" },
+        { "categoryIndex": 1, "label": "caneca", "emoji": "☕" },
+        { "categoryIndex": 1, "label": "camiseta", "emoji": "👕" },
+        { "categoryIndex": 1, "label": "chocolate", "emoji": "🍫" },
+        { "categoryIndex": 2, "label": "shopping", "emoji": "🛍️" },
+        { "categoryIndex": 2, "label": "online", "emoji": "🖥️" },
+        { "categoryIndex": 2, "label": "livraria", "emoji": "📚" },
+        { "categoryIndex": 2, "label": "mercado", "emoji": "🛒" }
+      ],
+      "clues": [
+        { "text": "O presente da livraria é o livro.", "clueType": "relational" },
+        { "text": "Quem comprou online escolheu a caneca.", "clueType": "relational" },
+        { "text": "Beto não comprou na livraria.", "clueType": "negative" },
+        { "text": "O chocolate veio do mercado.", "clueType": "relational" },
+        { "text": "Davi comprou no shopping.", "clueType": "positive" },
+        { "text": "Alice comprou online.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["Alice", "caneca", "online"], "value": "YES" },
+        { "itemLabels": ["Beto", "chocolate", "mercado"], "value": "YES" },
+        { "itemLabels": ["Cida", "livro", "livraria"], "value": "YES" },
+        { "itemLabels": ["Davi", "camiseta", "shopping"], "value": "YES" }
+      ],
+      "grammarNote": "Use pares loja↔presente: \"o presente da livraria é o livro\"; \"quem comprou online escolheu a caneca\". Positivas diretas ajudam a fixar pessoas: \"Alice comprou online\"."
+    },
+    {
+      "title": "Consultas Médicas (1)",
+      "themeSlug": "Saúde",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["profissionais", "horários", "relações"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Profissionais", "emoji": "🩺", "order": 1 },
+        { "label": "Horários", "emoji": "⏰", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "João", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Mia", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Tom", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Eva", "emoji": "👩" },
+        { "categoryIndex": 1, "label": "dentista", "emoji": "🦷" },
+        { "categoryIndex": 1, "label": "médico", "emoji": "🩺" },
+        { "categoryIndex": 1, "label": "psicólogo", "emoji": "🧠" },
+        { "categoryIndex": 1, "label": "fisioterapeuta", "emoji": "🦴" },
+        { "categoryIndex": 2, "label": "08h", "emoji": "🕗" },
+        { "categoryIndex": 2, "label": "09h", "emoji": "🕘" },
+        { "categoryIndex": 2, "label": "10h", "emoji": "🕙" },
+        { "categoryIndex": 2, "label": "11h", "emoji": "🕚" }
+      ],
+      "clues": [
+        { "text": "A consulta das 08h é com o dentista.", "clueType": "relational" },
+        { "text": "Tom está às 11h.", "clueType": "positive" },
+        { "text": "Eva é às 10h.", "clueType": "positive" },
+        { "text": "João não é com o psicólogo.", "clueType": "negative" },
+        { "text": "Quem está às 11h é com o psicólogo.", "clueType": "relational" },
+        { "text": "João é com o médico.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["João", "médico", "09h"], "value": "YES" },
+        { "itemLabels": ["Mia", "dentista", "08h"], "value": "YES" },
+        { "itemLabels": ["Tom", "psicólogo", "11h"], "value": "YES" },
+        { "itemLabels": ["Eva", "fisioterapeuta", "10h"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione horário e profissional: \"a consulta das 08h é com o dentista\"; \"quem está às 11h é com o psicólogo\". Positivas diretas fixam pares restantes: \"Tom está às 11h\"."
+    },
+    {
+      "title": "Agenda de Estudos (1)",
+      "themeSlug": "Estudos",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["matérias", "dias da semana", "relações"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Matérias", "emoji": "📚", "order": 1 },
+        { "label": "Dias", "emoji": "🗓️", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Léo", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Nina", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Paula", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Rui", "emoji": "👨" },
+        { "categoryIndex": 1, "label": "matemática", "emoji": "➗" },
+        { "categoryIndex": 1, "label": "história", "emoji": "🏺" },
+        { "categoryIndex": 1, "label": "ciências", "emoji": "🧪" },
+        { "categoryIndex": 1, "label": "inglês", "emoji": "🇬🇧" },
+        { "categoryIndex": 2, "label": "segunda" },
+        { "categoryIndex": 2, "label": "terça" },
+        { "categoryIndex": 2, "label": "quarta" },
+        { "categoryIndex": 2, "label": "quinta" }
+      ],
+      "clues": [
+        { "text": "Quem estuda na quarta é inglês.", "clueType": "relational" },
+        { "text": "Nina estuda matemática.", "clueType": "positive" },
+        { "text": "Léo estuda na quarta.", "clueType": "positive" },
+        { "text": "Paula não estuda história.", "clueType": "negative" },
+        { "text": "A matéria de terça é história.", "clueType": "relational" },
+        { "text": "Nina estuda na segunda.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["Léo", "inglês", "quarta"], "value": "YES" },
+        { "itemLabels": ["Nina", "matemática", "segunda"], "value": "YES" },
+        { "itemLabels": ["Paula", "ciências", "quinta"], "value": "YES" },
+        { "itemLabels": ["Rui", "história", "terça"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione dia e matéria com \"de\"/\"na\": \"a matéria de terça é história\"; \"quem estuda na quarta é inglês\". Positivas diretas fixam pessoa+dia: \"Léo estuda na quarta\"."
+    },
+    {
+      "title": "Viagem de Trabalho (2)",
+      "themeSlug": "Trabalho",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["destinos", "acomodação", "relações"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Destinos", "emoji": "🧭", "order": 1 },
+        { "label": "Acomodação", "emoji": "🏨", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Lia", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Neto", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Rafa", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Sora", "emoji": "👩" },
+        { "categoryIndex": 1, "label": "Rio", "emoji": "🏖️" },
+        { "categoryIndex": 1, "label": "BH", "emoji": "⛰️" },
+        { "categoryIndex": 1, "label": "Recife", "emoji": "🏝️" },
+        { "categoryIndex": 1, "label": "Curitiba", "emoji": "🌧️" },
+        { "categoryIndex": 2, "label": "hotel", "emoji": "🏨" },
+        { "categoryIndex": 2, "label": "hostel", "emoji": "🛌" },
+        { "categoryIndex": 2, "label": "apartamento", "emoji": "🏢" },
+        { "categoryIndex": 2, "label": "pousada", "emoji": "🏡" }
+      ],
+      "clues": [
+        { "text": "Quem vai ao Rio fica em hotel.", "clueType": "relational" },
+        { "text": "A acomodação de BH é apartamento.", "clueType": "relational" },
+        { "text": "Sora fica em pousada.", "clueType": "positive" },
+        { "text": "Neto vai a Curitiba.", "clueType": "positive" },
+        { "text": "Quem vai a Curitiba não fica em apartamento.", "clueType": "negative" },
+        { "text": "Lia vai ao Rio.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["Lia", "Rio", "hotel"], "value": "YES" },
+        { "itemLabels": ["Neto", "Curitiba", "hostel"], "value": "YES" },
+        { "itemLabels": ["Rafa", "BH", "apartamento"], "value": "YES" },
+        { "itemLabels": ["Sora", "Recife", "pousada"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione destino↔acomodação: \"quem vai ao Rio fica em hotel\"; \"a acomodação de BH é apartamento\". Positivas diretas fixam os pares restantes."
+    },
+    {
+      "title": "Projeto (1)",
+      "themeSlug": "Trabalho",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["projetos", "ferramentas", "relações"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Projetos", "emoji": "📁", "order": 1 },
+        { "label": "Ferramentas", "emoji": "🧰", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Ana", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Bruno", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Cida", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Davi", "emoji": "👨" },
+        { "categoryIndex": 1, "label": "app", "emoji": "📱" },
+        { "categoryIndex": 1, "label": "site", "emoji": "🖥️" },
+        { "categoryIndex": 1, "label": "relatório", "emoji": "📄" },
+        { "categoryIndex": 1, "label": "campanha", "emoji": "📢" },
+        { "categoryIndex": 2, "label": "Figma", "emoji": "🎨" },
+        { "categoryIndex": 2, "label": "Excel", "emoji": "📊" },
+        { "categoryIndex": 2, "label": "VSCode", "emoji": "💻" },
+        { "categoryIndex": 2, "label": "Canva", "emoji": "🖼️" }
+      ],
+      "clues": [
+        { "text": "O projeto do Figma é o app.", "clueType": "relational" },
+        { "text": "Quem usa Excel faz o relatório.", "clueType": "relational" },
+        { "text": "Davi trabalha no site.", "clueType": "positive" },
+        { "text": "Cida não usa Excel.", "clueType": "negative" },
+        { "text": "Quem usa Canva faz a campanha.", "clueType": "relational" },
+        { "text": "Ana usa Figma.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["Ana", "app", "Figma"], "value": "YES" },
+        { "itemLabels": ["Bruno", "relatório", "Excel"], "value": "YES" },
+        { "itemLabels": ["Cida", "campanha", "Canva"], "value": "YES" },
+        { "itemLabels": ["Davi", "site", "VSCode"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione projeto↔ferramenta: \"o projeto do Figma é o app\"; \"quem usa Excel faz o relatório\". Positivas diretas fixam os pares restantes."
+    },
+    {
+      "title": "Amigo Secreto (2)",
+      "themeSlug": "Compras",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["preço", "relações", "compras"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Presentes", "emoji": "🎁", "order": 1 },
+        { "label": "Preços", "emoji": "💵", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Alice", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Beto", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Cida", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Davi", "emoji": "👨" },
+        { "categoryIndex": 1, "label": "livro", "emoji": "📘" },
+        { "categoryIndex": 1, "label": "caneca", "emoji": "☕" },
+        { "categoryIndex": 1, "label": "camiseta", "emoji": "👕" },
+        { "categoryIndex": 1, "label": "chocolate", "emoji": "🍫" },
+        { "categoryIndex": 2, "label": "R$50" },
+        { "categoryIndex": 2, "label": "R$80" },
+        { "categoryIndex": 2, "label": "R$100" },
+        { "categoryIndex": 2, "label": "R$120" }
+      ],
+      "clues": [
+        { "text": "O chocolate custa R$50.", "clueType": "relational" },
+        { "text": "Quem pegou a caneca pagou R$80.", "clueType": "relational" },
+        { "text": "Davi pegou a camiseta.", "clueType": "positive" },
+        { "text": "O livro custa R$120.", "clueType": "relational" },
+        { "text": "Alice pegou a caneca.", "clueType": "positive" },
+        { "text": "Beto não pegou o livro.", "clueType": "negative" }
+      ],
+      "solution": [
+        { "itemLabels": ["Alice", "caneca", "R$80"], "value": "YES" },
+        { "itemLabels": ["Beto", "chocolate", "R$50"], "value": "YES" },
+        { "itemLabels": ["Cida", "livro", "R$120"], "value": "YES" },
+        { "itemLabels": ["Davi", "camiseta", "R$100"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione presente↔preço com frases diretas: \"o chocolate custa R$50\"; \"o livro custa R$120\". Positivas fixam pessoas: \"Alice pegou a caneca\"."
+    },
+    {
+      "title": "Consultas Médicas (2)",
+      "themeSlug": "Saúde",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["profissionais", "clínicas", "relações"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Profissionais", "emoji": "🩺", "order": 1 },
+        { "label": "Clínicas", "emoji": "🏥", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "João", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Mia", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Tom", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Eva", "emoji": "👩" },
+        { "categoryIndex": 1, "label": "dentista", "emoji": "🦷" },
+        { "categoryIndex": 1, "label": "médico", "emoji": "🩺" },
+        { "categoryIndex": 1, "label": "psicólogo", "emoji": "🧠" },
+        { "categoryIndex": 1, "label": "fisioterapeuta", "emoji": "🦴" },
+        { "categoryIndex": 2, "label": "Clínica Centro" },
+        { "categoryIndex": 2, "label": "Clínica Sol" },
+        { "categoryIndex": 2, "label": "Clínica Norte" },
+        { "categoryIndex": 2, "label": "Clínica Viva" }
+      ],
+      "clues": [
+        { "text": "O dentista atende na Clínica Norte.", "clueType": "relational" },
+        { "text": "A consulta na Clínica Centro é com o médico.", "clueType": "relational" },
+        { "text": "Quem vai à Clínica Viva é com o psicólogo.", "clueType": "relational" },
+        { "text": "João vai à Clínica Centro.", "clueType": "positive" },
+        { "text": "Eva não vai ao psicólogo.", "clueType": "negative" },
+        { "text": "Mia vai à Clínica Norte.", "clueType": "positive" }
+      ],
+      "solution": [
+        { "itemLabels": ["João", "médico", "Clínica Centro"], "value": "YES" },
+        { "itemLabels": ["Mia", "dentista", "Clínica Norte"], "value": "YES" },
+        { "itemLabels": ["Tom", "psicólogo", "Clínica Viva"], "value": "YES" },
+        { "itemLabels": ["Eva", "fisioterapeuta", "Clínica Sol"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione profissional↔clínica: \"o dentista atende na Clínica Norte\"; \"na Clínica Centro é com o médico\". Positivas diretas fixam quem vai a qual clínica."
+    },
+    {
+      "title": "Exames (1)",
+      "themeSlug": "Saúde",
+      "levelCode": "A2",
+      "languageCode": "pt",
+      "gridSize": 4,
+      "narrativeIntro": null,
+      "grammarFocus": ["exames", "dias da semana", "relações"],
+      "categories": [
+        { "label": "Pessoas", "emoji": "👥", "order": 0 },
+        { "label": "Exames", "emoji": "🧪", "order": 1 },
+        { "label": "Dias", "emoji": "🗓️", "order": 2 }
+      ],
+      "items": [
+        { "categoryIndex": 0, "label": "Léo", "emoji": "👨" },
+        { "categoryIndex": 0, "label": "Nina", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Paula", "emoji": "👩" },
+        { "categoryIndex": 0, "label": "Rui", "emoji": "👨" },
+        { "categoryIndex": 1, "label": "sangue" },
+        { "categoryIndex": 1, "label": "raio-x" },
+        { "categoryIndex": 1, "label": "visão" },
+        { "categoryIndex": 1, "label": "urina" },
+        { "categoryIndex": 2, "label": "segunda" },
+        { "categoryIndex": 2, "label": "terça" },
+        { "categoryIndex": 2, "label": "quarta" },
+        { "categoryIndex": 2, "label": "quinta" }
+      ],
+      "clues": [
+        { "text": "O exame de quarta é raio-x.", "clueType": "relational" },
+        { "text": "Rui faz urina.", "clueType": "positive" },
+        { "text": "Léo não faz raio-x.", "clueType": "negative" },
+        { "text": "Paula faz visão.", "clueType": "positive" },
+        { "text": "O exame de segunda é sangue.", "clueType": "relational" },
+        { "text": "Visão não é na terça.", "clueType": "negative" }
+      ],
+      "solution": [
+        { "itemLabels": ["Léo", "sangue", "segunda"], "value": "YES" },
+        { "itemLabels": ["Nina", "raio-x", "quarta"], "value": "YES" },
+        { "itemLabels": ["Paula", "visão", "quinta"], "value": "YES" },
+        { "itemLabels": ["Rui", "urina", "terça"], "value": "YES" }
+      ],
+      "grammarNote": "Relacione dia↔exame: \"o exame de segunda é sangue\"; \"o exame de quarta é raio-x\". Positivas diretas fixam pessoa↔exame: \"Rui faz urina\", \"Paula faz visão\"."
+    }
+  ]
+}

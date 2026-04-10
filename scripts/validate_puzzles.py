@@ -3,10 +3,15 @@
 Puzzle validator for lingua-grid-static.
 
 Checks each puzzle file for:
-  1. Structural integrity   — solution is a valid bijection, gridSize matches
+  1. Structural integrity   — solution is a valid bijection, gridSize matches,
+                              categoryCount and allowedClueTypes per config
   2. Clue/solution contradictions — explicit positives/negatives vs solution
   3. Numeric ordering clues — hour comparisons (B1) vs solution values
-  4. Solution uniqueness    — PRE & A1/A2 only (structured clue types)
+  4. Solution uniqueness    — levels where requireUniqueSolution: true in config
+  5. Min relational clues   — A1 requires at least minRelationalClues per config
+
+Severity (fail/warn) is driven by puzzle.config.json in the repo root.
+Warnings are printed but do not cause a non-zero exit code.
 
 Usage:
   python3 scripts/validate_puzzles.py [file ...]
@@ -20,7 +25,30 @@ import sys
 from itertools import permutations
 from pathlib import Path
 
-PUZZLE_DIR = Path(__file__).parent.parent / "content" / "puzzle"
+PUZZLE_DIR  = Path(__file__).parent.parent / "content" / "puzzle"
+CONFIG_PATH = Path(__file__).parent.parent / "puzzle.config.json"
+
+# ─── Config ───────────────────────────────────────────────────────────────────
+
+def _load_config():
+    if CONFIG_PATH.exists():
+        with open(CONFIG_PATH) as f:
+            return json.load(f)
+    return {}
+
+CONFIG = _load_config()
+
+def level_cfg(level_code: str) -> dict:
+    return CONFIG.get("levels", {}).get(level_code, {})
+
+def quality_severity(check_name: str) -> str:
+    """Return 'fail' or 'warn' (default 'fail' if not configured)."""
+    q = CONFIG.get("quality", {})
+    val = q.get(check_name, "fail")
+    if isinstance(val, dict):          # e.g. pairCoverage: {default: "warn", byTheme: {}}
+        val = val.get("default", "fail")
+    return val
+
 
 # ─── Colours ──────────────────────────────────────────────────────────────────
 
@@ -33,6 +61,10 @@ BOLD   = "\033[1m"
 def ok(msg):   return f"{GREEN}✅ {msg}{RESET}"
 def err(msg):  return f"{RED}❌ {msg}{RESET}"
 def warn(msg): return f"{YELLOW}⚠️  {msg}{RESET}"
+
+def issue(severity: str, msg: str) -> str:
+    """Format a message according to its severity string."""
+    return warn(msg) if severity == "warn" else err(msg)
 
 
 # ─── Solution helpers ─────────────────────────────────────────────────────────
@@ -59,20 +91,42 @@ def is_pre_format(puzzle):
 # ─── 1. Structural checks ─────────────────────────────────────────────────────
 
 def check_structure(puzzle):
-    issues = []
+    errors = []
+    warnings = []
+    level = puzzle.get("levelCode", "")
+    lcfg  = level_cfg(level)
+
     cats = {c["order"]: c["label"] for c in puzzle["categories"]}
     n_cats = len(cats)
     items_by_cat = {}
     for item in puzzle["items"]:
         items_by_cat.setdefault(item["categoryIndex"], []).append(item["label"])
 
+    # Category count (config-driven)
+    expected_cats = lcfg.get("categoryCount")
+    if expected_cats is not None and n_cats != expected_cats:
+        errors.append(err(
+            f"Level {level} expects {expected_cats} categories, found {n_cats}"
+        ))
+
     # gridSize vs items per category
     for ci, items in items_by_cat.items():
         if len(items) != puzzle["gridSize"]:
-            issues.append(err(
+            errors.append(err(
                 f"Category {ci} ({cats.get(ci,'?')}) has {len(items)} items "
                 f"but gridSize={puzzle['gridSize']}"
             ))
+
+    # Allowed clue types (config-driven)
+    allowed = lcfg.get("allowedClueTypes")
+    if allowed is not None:
+        for clue in puzzle.get("clues", []):
+            ctype = clue.get("clueType", "")
+            if ctype not in allowed:
+                errors.append(err(
+                    f"Level {level} disallows clueType '{ctype}' "
+                    f"(allowed: {allowed}) — clue: \"{clue['text'][:60]}\""
+                ))
 
     all_labels = {item["label"] for item in puzzle["items"]}
 
@@ -80,51 +134,42 @@ def check_structure(puzzle):
         matrix = parse_solution_matrix(puzzle)
         row_labels = items_by_cat.get(0, [])
         col_labels = items_by_cat.get(1, [])
-        # Each row has exactly one YES
         for row in row_labels:
             yes_count = sum(1 for (r, c), v in matrix.items() if r == row and v)
             if yes_count != 1:
-                issues.append(err(f"Row '{row}' has {yes_count} YES entries (expected 1)"))
-        # Each col has exactly one YES
+                errors.append(err(f"Row '{row}' has {yes_count} YES entries (expected 1)"))
         for col in col_labels:
             yes_count = sum(1 for (r, c), v in matrix.items() if c == col and v)
             if yes_count != 1:
-                issues.append(err(f"Col '{col}' has {yes_count} YES entries (expected 1)"))
-        # All labels valid
+                errors.append(err(f"Col '{col}' has {yes_count} YES entries (expected 1)"))
         for (r, c) in matrix:
             if r not in all_labels:
-                issues.append(err(f"Solution references unknown item '{r}'"))
+                errors.append(err(f"Solution references unknown item '{r}'"))
             if c not in all_labels:
-                issues.append(err(f"Solution references unknown item '{c}'"))
+                errors.append(err(f"Solution references unknown item '{c}'"))
     else:
         triples = parse_solution_triples(puzzle)
         if len(triples) != puzzle["gridSize"]:
-            issues.append(err(
+            errors.append(err(
                 f"Expected {puzzle['gridSize']} YES triples, found {len(triples)}"
             ))
-        # Each item appears exactly once
         for ci, items in items_by_cat.items():
             in_solution = [t[ci] for t in triples if ci < len(t)]
             for label in items:
                 count = in_solution.count(label)
                 if count != 1:
-                    issues.append(err(
+                    errors.append(err(
                         f"Item '{label}' (cat {ci}) appears {count}× in solution"
                     ))
-        # All labels valid
         for triple in triples:
             for label in triple:
                 if label not in all_labels:
-                    issues.append(err(f"Solution references unknown item '{label}'"))
+                    errors.append(err(f"Solution references unknown item '{label}'"))
 
-    return issues
+    return errors, warnings
 
 
 # ─── 2. Clue/solution contradiction checks ───────────────────────────────────
-
-# Patterns: (regex, direction)
-# direction "pos" = label MUST be in same triple as subject
-# direction "neg" = label MUST NOT be in same triple as subject
 
 NEGATIVE_PATTERNS = [
     r"(\w[\w\s]*?) (?:didn't|does not|is not|never|not) (?:use|have|do|go|take|attend|like|drink|wear|focus on|work as|pick up|conclude|build|research|design|target|track|report|get advice from|work in|take up|listen to) (?:a |an |the )?(.+?)(?:\.|,|$)",
@@ -149,21 +194,23 @@ def items_in_same_triple(label_a, label_b, triples):
     return False
 
 def check_clue_contradictions(puzzle):
-    issues = []
+    errors = []
+    warnings = []
+    severity = quality_severity("contradiction")
+
     if is_pre_format(puzzle):
-        return issues  # PRE format uses only positive/negative clue types; handled in uniqueness
+        return errors, warnings  # PRE uses only positive/negative clue types; handled in uniqueness
 
     triples = parse_solution_triples(puzzle)
     all_labels = {item["label"].lower() for item in puzzle["items"]}
 
     for clue in puzzle["clues"]:
-        text = clue["text"]
+        text  = clue["text"]
         ctype = clue.get("clueType", "")
 
-        # Strip leading emoji
         text_clean = re.sub(r'^[\U00010000-\U0010ffff\u2600-\u27BF\U0001F300-\U0001FAFF]\s*', '', text).strip()
 
-        if ctype == "negative" or ctype == "relational":
+        if ctype in ("negative", "relational"):
             for pattern in NEGATIVE_PATTERNS:
                 m = re.search(pattern, text_clean, re.IGNORECASE)
                 if m:
@@ -171,10 +218,13 @@ def check_clue_contradictions(puzzle):
                     obj     = normalize(m.group(2))
                     if subject in all_labels and obj in all_labels:
                         if items_in_same_triple(subject, obj, triples):
-                            issues.append(err(
+                            msg = (
                                 f"Negative clue violated: '{text_clean}' "
                                 f"— but solution pairs '{subject}' with '{obj}'"
-                            ))
+                            )
+                            (errors if severity == "fail" else warnings).append(
+                                issue(severity, msg)
+                            )
                     break
 
         if ctype == "positive":
@@ -185,28 +235,32 @@ def check_clue_contradictions(puzzle):
                     obj     = normalize(m.group(2))
                     if subject in all_labels and obj in all_labels:
                         if not items_in_same_triple(subject, obj, triples):
-                            issues.append(err(
+                            msg = (
                                 f"Positive clue violated: '{text_clean}' "
                                 f"— but solution does NOT pair '{subject}' with '{obj}'"
-                            ))
+                            )
+                            (errors if severity == "fail" else warnings).append(
+                                issue(severity, msg)
+                            )
                     break
 
-    return issues
+    return errors, warnings
 
 
 # ─── 3. Numeric ordering checks (B1 hours) ───────────────────────────────────
 
 def parse_hours(label):
-    """Extract integer from '35 hours' → 35."""
     m = re.match(r"(\d+)", label)
     return int(m.group(1)) if m else None
 
 def check_numeric_ordering(puzzle):
-    issues = []
-    if is_pre_format(puzzle):
-        return issues
+    errors = []
+    warnings = []
+    severity = quality_severity("numericOrdering")
 
-    # Only applies when one category contains hour values
+    if is_pre_format(puzzle):
+        return errors, warnings
+
     items_by_cat = {}
     for item in puzzle["items"]:
         items_by_cat.setdefault(item["categoryIndex"], []).append(item["label"])
@@ -217,11 +271,10 @@ def check_numeric_ordering(puzzle):
             hour_cat = ci
             break
     if hour_cat is None:
-        return issues
+        return errors, warnings
 
     triples = parse_solution_triples(puzzle)
 
-    # Build lookup: label → hours value, job → hours value, person → hours value
     def hours_for(label):
         for triple in triples:
             if label.lower() in [t.lower() for t in triple]:
@@ -229,13 +282,9 @@ def check_numeric_ordering(puzzle):
         return None
 
     ordering_patterns = [
-        # "X worked more/fewer hours than the Y"   (person vs job)
         (r"(\w+) worked (more|fewer) hours than the (\w+)", "person_vs_job"),
-        # "The X worked more/fewer/longer hours than the Y"  (job vs job)
         (r"[Tt]he (\w+) worked (more|fewer|longer|less) hours than the (\w+)", "job_vs_job"),
-        # "X worked more/fewer hours than Y"   (person vs person)
         (r"(\w+) worked (more|fewer) hours than (\w+)", "person_vs_person"),
-        # "X worked the most/fewest hours"
         (r"(\w+) worked the (most|fewest) hours", "extremes"),
         (r"(\w+) (?:spent|worked) more (?:time|hours) .+? than anyone else", "extremes_more"),
     ]
@@ -250,6 +299,9 @@ def check_numeric_ordering(puzzle):
             if not m:
                 continue
 
+            violated = False
+            detail   = ""
+
             if kind == "person_vs_job":
                 name, direction, ref_job = m.group(1), m.group(2), m.group(3)
                 h_name = hours_for(name)
@@ -257,10 +309,8 @@ def check_numeric_ordering(puzzle):
                 if h_name is not None and h_ref is not None:
                     expected = h_name > h_ref if direction == "more" else h_name < h_ref
                     if not expected:
-                        issues.append(err(
-                            f"Ordering violated: '{text}' "
-                            f"— {name}={h_name}h, {ref_job}={h_ref}h"
-                        ))
+                        violated = True
+                        detail = f"{name}={h_name}h, {ref_job}={h_ref}h"
 
             elif kind == "job_vs_job":
                 j1, direction, j2 = m.group(1).lower(), m.group(2), m.group(3).lower()
@@ -269,10 +319,8 @@ def check_numeric_ordering(puzzle):
                 if h1 is not None and h2 is not None:
                     expected = h1 > h2 if direction in ("more", "longer") else h1 < h2
                     if not expected:
-                        issues.append(err(
-                            f"Ordering violated: '{text}' "
-                            f"— {j1}={h1}h, {j2}={h2}h"
-                        ))
+                        violated = True
+                        detail = f"{j1}={h1}h, {j2}={h2}h"
 
             elif kind == "person_vs_person":
                 n1, direction, n2 = m.group(1), m.group(2), m.group(3)
@@ -281,10 +329,8 @@ def check_numeric_ordering(puzzle):
                 if h1 is not None and h2 is not None:
                     expected = h1 > h2 if direction == "more" else h1 < h2
                     if not expected:
-                        issues.append(err(
-                            f"Ordering violated: '{text}' "
-                            f"— {n1}={h1}h, {n2}={h2}h"
-                        ))
+                        violated = True
+                        detail = f"{n1}={h1}h, {n2}={h2}h"
 
             elif kind in ("extremes", "extremes_more"):
                 name = m.group(1)
@@ -297,19 +343,20 @@ def check_numeric_ordering(puzzle):
                     else:
                         expected = h_name == min(all_hours)
                     if not expected:
-                        issues.append(err(
-                            f"Ordering violated: '{text}' "
-                            f"— {name}={h_name}h, all={sorted(all_hours)}"
-                        ))
+                        violated = True
+                        detail = f"{name}={h_name}h, all={sorted(all_hours)}"
+
+            if violated:
+                msg = f"Ordering violated: '{text}' — {detail}"
+                (errors if severity == "fail" else warnings).append(issue(severity, msg))
             break
 
-    return issues
+    return errors, warnings
 
 
-# ─── 4. Uniqueness check (PRE and A1/A2) ─────────────────────────────────────
+# ─── 4. Uniqueness check ──────────────────────────────────────────────────────
 
 LABEL_ALIASES = {
-    # Clue idiom → canonical item label
     "home": "house",
 }
 
@@ -317,13 +364,6 @@ PRONOUNS = {"he", "she", "his", "her", "him"}
 
 
 def normalize_clue_text(text, all_labels):
-    """
-    Apply alias substitutions so that natural language variants in clue text
-    resolve to actual item labels.
-
-    Each alias is only applied when the alias source word is NOT itself a label
-    in this puzzle (to avoid collisions like "home" being both an alias and a label).
-    """
     labels_lower = {l.lower() for l in all_labels}
     for alias, canonical in LABEL_ALIASES.items():
         if alias.lower() not in labels_lower:
@@ -332,26 +372,17 @@ def normalize_clue_text(text, all_labels):
 
 
 def label_matches(label, text):
-    """
-    Check whether a label appears in text, allowing for:
-      - Exact whole-word match (case-insensitive)
-      - Verb inflection: label 'reads' also matches 'read' in text
-      - Plural/adverbial form in text: label 'Monday' matches 'Mondays' in text
-    """
     if re.search(r'\b' + re.escape(label) + r'\b', text, re.IGNORECASE):
         return True
-    # Label ends in 's': check stem (reads → read, runs → run)
     if label.endswith('s') and len(label) > 2:
         if re.search(r'\b' + re.escape(label[:-1]) + r'\b', text, re.IGNORECASE):
             return True
-    # Text may have label+'s' (Monday → Mondays, Friday → Fridays, Sunday → Sundays)
     if re.search(r'\b' + re.escape(label) + r's\b', text, re.IGNORECASE):
         return True
     return False
 
 
 def build_emoji_person_map(puzzle):
-    """Map emoji character → item label for person-category items (category 0)."""
     emoji_map = {}
     for item in puzzle["items"]:
         if item["categoryIndex"] == 0 and "emoji" in item:
@@ -360,22 +391,15 @@ def build_emoji_person_map(puzzle):
 
 
 def resolve_pronouns(text, prev_person, emoji_person_map):
-    """
-    Replace He/She/His/Her/Him with a person label when one can be identified:
-      - From an emoji at the start of the clue (A1 style)
-      - From the last named person in the previous clue (A2 style)
-    """
     if not re.search(r'\b(?:he|she|his|her|him)\b', text, re.IGNORECASE):
         return text
 
     resolved_name = None
 
-    # Strategy 1: leading emoji maps to a person
     emoji_match = re.match(r'^([\U00010000-\U0010ffff\u2600-\u27BF\U0001F300-\U0001FAFF])', text)
     if emoji_match and emoji_match.group(1) in emoji_person_map:
         resolved_name = emoji_person_map[emoji_match.group(1)]
 
-    # Strategy 2: carry over from previous clue
     if resolved_name is None and prev_person:
         resolved_name = prev_person
 
@@ -386,40 +410,21 @@ def resolve_pronouns(text, prev_person, emoji_person_map):
 
 
 def build_constraints(puzzle):
-    """
-    Extract constraints by finding item labels mentioned in each clue.
-
-    For each clue that mentions exactly 2 known item labels:
-      positive / relational → the two labels must appear in the same triple
-      negative              → they must NOT appear in the same triple
-
-    Applies several normalisations to handle natural language variation:
-      - Aliases  (home → house)
-      - Verb inflection  (reads ↔ read)
-      - Pronoun resolution  (He/She/His/Her → person name)
-    """
     all_labels = [item["label"] for item in puzzle["items"]]
     emoji_person_map = build_emoji_person_map(puzzle)
     constraints = []
-    prev_person = None   # tracks last explicitly-named person across clues
+    prev_person = None
 
     for clue in puzzle["clues"]:
         raw_text = clue["text"]
         ctype    = clue.get("clueType", "")
 
-        # Strip leading emoji for cleaner processing
         text = re.sub(r'^[\U00010000-\U0010ffff\u2600-\u27BF\U0001F300-\U0001FAFF]\s*', '', raw_text).strip()
-
-        # Alias normalisation
         text = normalize_clue_text(text, all_labels)
-
-        # Pronoun resolution
         text = resolve_pronouns(raw_text + " " + text, prev_person, emoji_person_map)
 
-        # Find which item labels appear in this clue text
         found = [label for label in all_labels if label_matches(label, text)]
 
-        # Update prev_person: any person-category label explicitly mentioned
         person_labels = [item["label"] for item in puzzle["items"] if item["categoryIndex"] == 0]
         for pl in person_labels:
             if label_matches(pl, text):
@@ -436,34 +441,36 @@ def build_constraints(puzzle):
                 constraints.append(("neg", a, b))
 
         elif len(found) == 3:
-            # Sort labels by category index so we know which is person/mid/highest
             sorted_labels = sorted(found, key=lambda l: label_to_cat.get(l.lower(), 99))
-            a = sorted_labels[0].lower()  # lowest category (usually person)
-            c = sorted_labels[2].lower()  # highest category (location/time/color)
+            a = sorted_labels[0].lower()
+            c = sorted_labels[2].lower()
 
             if ctype in ("positive", "relational"):
-                # All three belong in the same triple → extract all pairwise pos constraints
                 for i in range(3):
                     for j in range(i + 1, 3):
                         constraints.append(("pos", sorted_labels[i].lower(), sorted_labels[j].lower()))
-
             elif ctype == "negative":
-                # "Person does not do Activity in Location" → person≠location
-                # (the activity link is usually established by other clues)
                 constraints.append(("neg", a, c))
 
     return constraints
 
 
 def check_uniqueness(puzzle):
-    """
-    Only run for PRE and A1/A2 (structured clue types).
-    Enumerates all valid bijection assignments and counts solutions.
-    """
-    issues = []
+    errors = []
+    warnings = []
     level = puzzle.get("levelCode", "")
-    if level not in ("PRE", "A1", "A2"):
-        return issues
+    lcfg  = level_cfg(level)
+    severity = quality_severity("uniqueness")
+
+    # Only run if this level requires unique solutions
+    if not lcfg.get("requireUniqueSolution", False):
+        return errors, warnings
+
+    # Constraint extraction uses English regex patterns — skip for other languages
+    lang = puzzle.get("languageCode", "en")
+    if lang != "en":
+        print(f"      {YELLOW}ℹ️  uniqueness check skipped (non-English clues — verify separately){RESET}")
+        return errors, warnings
 
     items_by_cat = {}
     for item in puzzle["items"]:
@@ -471,18 +478,15 @@ def check_uniqueness(puzzle):
 
     cat_keys = sorted(items_by_cat.keys())
     if len(cat_keys) < 2:
-        return issues
+        return errors, warnings
 
     constraints = build_constraints(puzzle)
 
-    # Represent each candidate solution as a list of triples (one per base item).
-    # cat_keys[0] is the "anchor" category; we permute all other categories.
     anchor_items = items_by_cat[cat_keys[0]]
     other_keys   = cat_keys[1:]
     other_items  = [items_by_cat[k] for k in other_keys]
 
     def triple_is_consistent(triples):
-        """triples: list of tuples, one per anchor item."""
         label_set_per_row = [
             frozenset(t.lower() for t in triple)
             for triple in triples
@@ -498,9 +502,7 @@ def check_uniqueness(puzzle):
     MAX_SOLUTIONS = 3
     solutions_found = 0
 
-    # Generate all combinations of permutations for the non-anchor categories
     from itertools import permutations as _perms
-
     perm_lists = [list(_perms(items)) for items in other_items]
 
     def iter_combinations(perm_idx, current_perms):
@@ -508,7 +510,6 @@ def check_uniqueness(puzzle):
         if solutions_found >= MAX_SOLUTIONS:
             return
         if perm_idx == len(perm_lists):
-            # Build triples: anchor[i] + current_perms[cat][i]
             triples = [
                 tuple([anchor_items[i]] + [current_perms[j][i] for j in range(len(other_keys))])
                 for i in range(len(anchor_items))
@@ -526,17 +527,17 @@ def check_uniqueness(puzzle):
     iter_combinations(0, [])
 
     if solutions_found == 0:
-        issues.append(err(
-            "No valid solution found — clues may be over-constrained or contradictory"
-        ))
+        msg = "No valid solution found — clues may be over-constrained or contradictory"
+        (errors if severity == "fail" else warnings).append(issue(severity, msg))
     elif solutions_found > 1:
-        issues.append(err(
+        msg = (
             f"Under-constrained — {solutions_found}"
             f"{'+'if solutions_found >= MAX_SOLUTIONS else ''} "
             f"valid solutions exist (need more clues)"
-        ))
+        )
+        (errors if severity == "fail" else warnings).append(issue(severity, msg))
 
-    return issues
+    return errors, warnings
 
 
 # ─── Main runner ──────────────────────────────────────────────────────────────
@@ -546,28 +547,36 @@ def validate_file(path):
         data = json.load(f)
 
     puzzles = data.get("puzzles", [])
-    file_issues = 0
+    file_errors = 0
+    file_warnings = 0
     print(f"\n{BOLD}{path.name}{RESET}  ({len(puzzles)} puzzles)")
 
     for i, puzzle in enumerate(puzzles):
         title = puzzle.get("title", f"Puzzle {i+1}")
         label = f"  #{i+1} {title}"
 
-        all_issues = []
-        all_issues += check_structure(puzzle)
-        all_issues += check_clue_contradictions(puzzle)
-        all_issues += check_numeric_ordering(puzzle)
-        all_issues += check_uniqueness(puzzle)
+        all_errors   = []
+        all_warnings = []
 
-        if all_issues:
-            print(f"{label}")
-            for issue in all_issues:
-                print(f"      {issue}")
-            file_issues += len(all_issues)
+        for check in (check_structure, check_clue_contradictions,
+                      check_numeric_ordering, check_uniqueness):
+            e, w = check(puzzle)
+            all_errors   += e
+            all_warnings += w
+
+        if all_errors or all_warnings:
+            print(label)
+            for msg in all_errors:
+                print(f"      {msg}")
+            for msg in all_warnings:
+                print(f"      {msg}")
         else:
             print(f"{label}  {GREEN}✅{RESET}")
 
-    return file_issues
+        file_errors   += len(all_errors)
+        file_warnings += len(all_warnings)
+
+    return file_errors, file_warnings
 
 
 def main():
@@ -580,16 +589,24 @@ def main():
         print(err("No puzzle files found."))
         sys.exit(1)
 
-    total_issues = 0
+    total_errors   = 0
+    total_warnings = 0
     for path in paths:
-        total_issues += validate_file(path)
+        e, w = validate_file(path)
+        total_errors   += e
+        total_warnings += w
 
     print()
-    if total_issues == 0:
-        print(ok(f"All puzzles passed validation."))
+    if total_errors == 0 and total_warnings == 0:
+        print(ok("All puzzles passed validation."))
     else:
-        print(err(f"{total_issues} issue(s) found across all files."))
-        sys.exit(1)
+        if total_warnings:
+            print(warn(f"{total_warnings} warning(s) — review recommended."))
+        if total_errors:
+            print(err(f"{total_errors} error(s) found across all files."))
+            sys.exit(1)
+        else:
+            print(ok("All puzzles passed validation (with warnings above)."))
 
 
 if __name__ == "__main__":
