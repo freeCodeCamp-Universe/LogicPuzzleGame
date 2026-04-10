@@ -299,13 +299,6 @@ export default function TutorialOverlay({ onClose }: TutorialOverlayProps) {
                 <span className="font-mono text-xs font-bold text-fcc-fg-tertiary uppercase tracking-widest">
                   Tutorial {phase} of 2 — Step {stepIdx + 1} of {steps.length}
                 </span>
-                <button
-                  type="button"
-                  onClick={handleSkip}
-                  className="font-mono text-xs font-bold text-fcc-fg-tertiary hover:text-fcc-fg-primary transition-colors"
-                >
-                  Skip
-                </button>
               </div>
               <p className="font-mono text-fcc-fg-primary text-base leading-relaxed">
                 {currentStep.text}
