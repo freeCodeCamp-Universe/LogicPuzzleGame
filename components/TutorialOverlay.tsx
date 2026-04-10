@@ -281,44 +281,7 @@ export default function TutorialOverlay({ onClose }: TutorialOverlayProps) {
               LinguaGrid Tutorial
             </h2>
 
-            {/* Tutorial puzzle grid */}
-            <div className="w-full flex justify-center">
-              <PuzzleGrid
-                key={gridKey}
-                categories={categories}
-                items={items}
-                disabled={tutorialGridLocked}
-                tutorialTarget={tutorialTarget}
-                tutorialFreeSolve={tutorialFreeSolve}
-                onCellChange={handleCellChange}
-                onAllFilled={handleAllFilled}
-              />
-            </div>
-
-            {/* Clues */}
-            <div className="w-full">
-              <div className="p-4 rounded border border-fcc-bg-quaternary bg-fcc-bg-primary">
-                <p className="font-mono text-xs font-bold text-fcc-fg-muted uppercase tracking-widest mb-3">
-                  Clues
-                </p>
-                <ol className="space-y-2">
-                  {clues.map((clue, i) => (
-                    <li
-                      key={i}
-                      className={`font-mono text-sm ${
-                        currentStep.activeClue === i
-                          ? "text-fcc-fg-primary font-bold"
-                          : "text-fcc-fg-muted"
-                      }`}
-                    >
-                      {i + 1}. {clue}
-                    </li>
-                  ))}
-                </ol>
-              </div>
-            </div>
-
-            {/* Instruction card — bottom, distinct background */}
+            {/* Instruction card — below title, above puzzle */}
             <div className="w-full rounded-lg p-5 flex flex-col gap-3 bg-fcc-bg-quaternary border border-fcc-fg-muted/20">
               {/* Header row inside instruction card */}
               <div className="flex items-center justify-between">
@@ -364,6 +327,43 @@ export default function TutorialOverlay({ onClose }: TutorialOverlayProps) {
                     {tutorialFreeSolve ? "↑ Solve the puzzle above" : "↑ Click the highlighted cell above"}
                   </p>
                 )}
+              </div>
+            </div>
+
+            {/* Tutorial puzzle grid */}
+            <div className="w-full flex justify-center">
+              <PuzzleGrid
+                key={gridKey}
+                categories={categories}
+                items={items}
+                disabled={tutorialGridLocked}
+                tutorialTarget={tutorialTarget}
+                tutorialFreeSolve={tutorialFreeSolve}
+                onCellChange={handleCellChange}
+                onAllFilled={handleAllFilled}
+              />
+            </div>
+
+            {/* Clues */}
+            <div className="w-full">
+              <div className="p-4 rounded border border-fcc-bg-quaternary bg-fcc-bg-primary">
+                <p className="font-mono text-xs font-bold text-fcc-fg-muted uppercase tracking-widest mb-3">
+                  Clues
+                </p>
+                <ol className="space-y-2">
+                  {clues.map((clue, i) => (
+                    <li
+                      key={i}
+                      className={`font-mono text-sm ${
+                        currentStep.activeClue === i
+                          ? "text-fcc-fg-primary font-bold"
+                          : "text-fcc-fg-muted"
+                      }`}
+                    >
+                      {i + 1}. {clue}
+                    </li>
+                  ))}
+                </ol>
               </div>
             </div>
 

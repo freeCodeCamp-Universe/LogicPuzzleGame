@@ -108,20 +108,21 @@ interface CellProps {
   wave?: boolean;
   highlighted?: boolean;
   tutorialDimmed?: boolean;
+  locked?: boolean;
 }
 
-function Cell({ display, onClick, ariaLabel, bandAlt = false, waveDelay = 0, wave = false, highlighted = false, tutorialDimmed = false }: CellProps) {
+function Cell({ display, onClick, ariaLabel, bandAlt = false, waveDelay = 0, wave = false, highlighted = false, tutorialDimmed = false, locked = false }: CellProps) {
   const base =
     "block w-full h-full min-h-[3rem] flex items-center justify-center font-bold text-base select-none transition-colors";
 
-  const emptyStyle = bandAlt
-    ? "bg-fcc-bg-primary hover:bg-fcc-bg-secondary cursor-pointer"
-    : "bg-fcc-bg-tertiary hover:bg-fcc-bg-quaternary cursor-pointer";
+  const emptyStyle = locked
+    ? (bandAlt ? "bg-fcc-bg-primary cursor-default" : "bg-fcc-bg-tertiary cursor-default")
+    : (bandAlt ? "bg-fcc-bg-primary hover:bg-fcc-bg-secondary cursor-pointer" : "bg-fcc-bg-tertiary hover:bg-fcc-bg-quaternary cursor-pointer");
 
   const styles: Record<DisplayState, string> = {
     empty:     emptyStyle,
-    YES:       "bg-cell-yes text-cell-yes-text cursor-pointer",
-    NO_manual: "bg-cell-no text-cell-no-text cursor-pointer",
+    YES:       locked ? "bg-cell-yes text-cell-yes-text cursor-default" : "bg-cell-yes text-cell-yes-text cursor-pointer",
+    NO_manual: locked ? "bg-cell-no text-cell-no-text cursor-default" : "bg-cell-no text-cell-no-text cursor-pointer",
     NO_auto:   "bg-cell-no text-cell-no-text opacity-40 cursor-default",
     blocked:   "bg-fcc-bg-secondary cursor-default",
   };
@@ -414,6 +415,7 @@ export default function PuzzleGrid({
                             waveDelay={waveDelay}
                             highlighted={highlighted}
                             tutorialDimmed={tutorialDimmed}
+                            locked={disabled}
                           />
                         </td>
                       );
