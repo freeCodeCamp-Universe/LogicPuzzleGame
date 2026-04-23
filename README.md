@@ -140,6 +140,7 @@ components/
   ClueWord.tsx          # Clickable word → Web Speech API
   EmojiHeader.tsx       # Grid header with emoji + label
   LangSync.tsx          # Sets document.documentElement.lang on the client
+  LevelBadge.tsx        # Badge displaying level code (PRE, A1, A2, B1)
 content/
   puzzle/               # Puzzle JSON files (source of truth)
 hooks/
