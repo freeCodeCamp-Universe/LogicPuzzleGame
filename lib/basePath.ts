@@ -1,4 +1,3 @@
-const basePath =
-  process.env.NODE_ENV === "production" ? "/lingua-grid-static" : "";
+const basePath = "";
 
 export default basePath;
