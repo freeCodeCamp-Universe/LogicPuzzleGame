@@ -26,6 +26,9 @@ export const metadata: Metadata = {
   title: "LinguaGrid — Language Learning Through Logic Puzzles",
   description:
     "Learn languages through logic grid puzzles. Read clues in the target language, reason about relationships, and fill in the grid.",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

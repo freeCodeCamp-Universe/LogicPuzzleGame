@@ -1,0 +1,21 @@
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="LinguaGrid logo — row meets column at a deduction">
+  <!-- Background: gray-90 -->
+  <rect x="0" y="0" width="64" height="64" rx="12" fill="#0a0a23"/>
+
+  <!-- Faint grid hint: gray-75 (borders/subtle) -->
+  <g stroke="#3b3b4f" stroke-width="1" opacity="0.6">
+    <line x1="14" y1="22" x2="50" y2="22"/>
+    <line x1="14" y1="42" x2="50" y2="42"/>
+    <line x1="22" y1="14" x2="22" y2="50"/>
+    <line x1="42" y1="14" x2="42" y2="50"/>
+  </g>
+
+  <!-- Cross: blue accent (#99c9ff) — structural/interactive -->
+  <line x1="10" y1="32" x2="54" y2="32" stroke="#99c9ff" stroke-width="3" stroke-linecap="round"/>
+  <line x1="32" y1="10" x2="32" y2="54" stroke="#99c9ff" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Deduction point: gray-85 fill, blue stroke -->
+  <circle cx="32" cy="32" r="9" fill="#1b1b32" stroke="#99c9ff" stroke-width="2.5"/>
+  <!-- Checkmark: green accent (#acd157) — success/completion -->
+  <polyline points="27.5,32 30.5,35 36.5,28.5" fill="none" stroke="#acd157" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
