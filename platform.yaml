@@ -1,4 +1,4 @@
-site: languagegames
+site: logicpuzzlegame
 build:
   command: pnpm run build
   output: out
