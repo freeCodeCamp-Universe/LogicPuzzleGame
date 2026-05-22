@@ -16,9 +16,9 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: PuzzlePageProps): Metadata {
   const puzzle = getPuzzleById(params.id);
-  if (!puzzle) return { title: "Puzzle not found — LinguaGrid" };
+  if (!puzzle) return { title: "Puzzle not found — Logic Puzzle Game" };
   return {
-    title: `${puzzle.title} — LinguaGrid`,
+    title: `${puzzle.title} — Logic Puzzle Game`,
     description: `Solve this ${puzzle.levelCode} ${puzzle.languageName} logic grid puzzle.`,
   };
 }

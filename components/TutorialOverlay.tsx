@@ -79,7 +79,7 @@ interface TutorialStep {
 
 const T1_STEPS: TutorialStep[] = [
   {
-    text: "LinguaGrid is a logic puzzle game that helps you practice a new language. The goal is to find the unique match between all categories — each item belongs to exactly one item in every other category.",
+    text: "Logic Puzzle Game is a logic puzzle game that helps you practice a new language. The goal is to find the unique match between all categories — each item belongs to exactly one item in every other category.",
     action: "ok",
   },
   {

@@ -69,7 +69,7 @@ const en: Translations = {
   cluesHeader: "Clues — click any sentence to hear it",
   grammarNote: "Grammar note",
 
-  tutorialTitle: "LinguaGrid Tutorial",
+  tutorialTitle: "Logic Puzzle Game Tutorial",
   tutorialPhaseStep: (phase, step, total) =>
     `Tutorial ${phase} of 2 — Step ${step} of ${total}`,
   tutorialNextBtn: "Next",
@@ -103,7 +103,7 @@ const pt: Translations = {
   cluesHeader: "Dicas — clique em qualquer frase para ouvir",
   grammarNote: "Nota gramatical",
 
-  tutorialTitle: "Tutorial LinguaGrid",
+  tutorialTitle: "Tutorial Logic Puzzle Game",
   tutorialPhaseStep: (phase, step, total) =>
     `Tutorial ${phase} de 2 — Passo ${step} de ${total}`,
   tutorialNextBtn: "Próximo",

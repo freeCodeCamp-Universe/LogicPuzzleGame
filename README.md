@@ -1,6 +1,6 @@
-# LinguaGrid
+# Logic Puzzle Game
 
-LinguaGrid is a static web game for language practice through logic grid puzzles.
+Logic Puzzle Game is a static web game for language practice through logic grid puzzles.
 Players read clues in the target language, mark matches and exclusions in a grid,
 and solve each puzzle by deduction.
 

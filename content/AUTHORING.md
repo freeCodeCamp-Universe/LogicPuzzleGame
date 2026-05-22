@@ -1,6 +1,6 @@
 # Puzzle Authoring Guide
 
-Everything you need to create and validate LinguaGrid puzzles.
+Everything you need to create and validate Logic Puzzle Game puzzles.
 
 ---
 

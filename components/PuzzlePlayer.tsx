@@ -264,7 +264,7 @@ export default function PuzzlePlayer({
       {/* ── Header ── */}
       <header className="border-b border-fcc-bg-tertiary bg-fcc-bg-primary">
         <div className="max-w-5xl mx-auto px-4 py-3 flex items-center gap-4">
-          <span className="font-mono font-bold text-fcc-fg-primary text-2xl">LinguaGrid</span>
+          <span className="font-mono font-bold text-fcc-fg-primary text-2xl">Logic Puzzle Game</span>
           <button
             type="button"
             onClick={() => setShowTutorial(true)}
